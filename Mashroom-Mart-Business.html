@@ -1,0 +1,113 @@
+import re
+from pathlib import Path
+
+src = Path("/mnt/data/Kundu_Mushroom_Farm_GiftHub_Single_HTML_Embedded_Images.html")
+out = Path("/mnt/data/Kundu_Mushroom_Farm_GiftHub_Board_Style_4_Images.html")
+
+html = src.read_text(encoding="utf-8", errors="ignore")
+
+pattern = re.compile(
+    r'<div class="mushroomImageCards">.*?</div>\s*\n\s*<div class="products">',
+    re.S,
+)
+match = pattern.search(html)
+
+if not match:
+    raise RuntimeError("Gallery block was not found in the source HTML.")
+
+# Minified Gallery HTML
+gallery = (
+    '<div class="mushroomBoard"><div class="boardHeader"><div class="boardLogo">🍄</div>'
+    '<div><div class="boardBrand">KUNDU MUSHROOM FARM</div>'
+    '<div class="boardTagline">✨ PREMIUM QUALITY • ORGANIC • FRESH HARVEST ✨</div></div>'
+    '<div class="boardBadge">VIP CHOICE 🌿</div></div><div class="boardTitle"><span>🍄</span>'
+    '<div><h2>আমাদের প্রিমিয়াম মাশরুম প্রোডাক্টস</h2>'
+    '<p>ফার্ম থেকে সরাসরি ফ্রেশ ও স্বাস্থ্যকর মাশরুম অর্ডার করুন</p></div></div>'
+    '<div class="boardImageGrid"><article class="boardImageCard">'
+    '<div class="boardCardHeader"><span class="boardCardTitle">🍄 Fresh Oyster Mushroom</span></div>'
+    '<div class="cardImgWrapper"><img src="data:image/jpeg;base64,PLACEHOLDER_OYSTER" alt="Fresh Oyster Mushroom"></div>'
+    '<div class="boardCardText"><strong>ঝিনুক মাশরুম</strong><span>১০০% অর্গানিক ফ্রেশ ঝিনুক মাশরুম • ১৪০ গ্রাম প্যাক</span></div>'
+    '<div class="boardPrice">₹২০ <small>/ প্যাকেট</small></div>'
+    '<button class="boardButton" onclick="addCart(\'Fresh Oyster Mushroom\',20)">🛒 Cart-এ যোগ করুন</button></article>'
+    '<article class="boardImageCard"><div class="boardCardHeader"><span class="boardCardTitle">🍄 Button Mushroom</span></div>'
+    '<div class="cardImgWrapper"><img src="data:image/jpeg;base64,PLACEHOLDER_BUTTON" alt="Button Mushroom"></div>'
+    '<div class="boardCardText"><strong>বাটন মাশরুম</strong><span>প্রিমিয়াম গ্রেড বাটন মাশরুম • ২৫০ গ্রাম প্যাক</span></div>'
+    '<div class="boardPrice">₹৪০ <small>/ প্যাকেট</small></div>'
+    '<button class="boardButton actionBtn" onclick="scrollToOrder(\'Button Mushroom\')">📲 সরাসরি অর্ডার করুন</button></article>'
+    '<article class="boardImageCard"><div class="boardCardHeader"><span class="boardCardTitle">🌱 Mushroom Farm</span></div>'
+    '<div class="cardImgWrapper"><img src="data:image/jpeg;base64,PLACEHOLDER_FARM" alt="Mushroom Farm"></div>'
+    '<div class="boardCardText"><strong>আমাদের ফার্মের দৃশ্য</strong><span>সম্পূর্ণ প্রাকৃতিক ও জীবাণুমুক্ত পরিবেশে উৎপাদিত</span></div>'
+    '<div class="boardPrice neutralPrice">হাইজিন সার্টিফাইড</div>'
+    '<button class="boardButton secBtn" onclick="document.querySelector(\'#about\').scrollIntoView()">🌿 ফার্ম সম্পর্কে জানুন</button></article>'
+    '<article class="boardImageCard highlightCard"><div class="boardCardHeader offerHeader"><span class="boardCardTitle">🎁 Special VIP Pack</span></div>'
+    '<div class="cardImgWrapper offerPhoto"><img src="data:image/jpeg;base64,PLACEHOLDER_OYSTER" alt="Special Offer Mushroom Pack"><span class="vipTag">🔥 সেরা অফার</span></div>'
+    '<div class="boardCardText"><strong>অফার ও রিওয়ার্ড প্যাক</strong><span>নিয়মিত গ্রাহকদের জন্য বিশেষ ছাড় ও উপহার সুবিধা</span></div>'
+    '<div class="boardPrice offerPrice">বিশেষ মুল্য ছাড়</div>'
+    '<button class="boardButton offerBtn" onclick="document.querySelector(\'#offers\').scrollIntoView()">🎁 অফার আনলক করুন</button></article></div>'
+    '<div class="boardBottom">🌟 <span>Fresh</span> • <span>Clean</span> • <span>100% Organic</span> • <span>Fast Home Delivery</span> 🌟</div></div><div class="products">'
+)
+
+html = html[: match.start()] + gallery + html[match.end() :]
+
+original = src.read_text(encoding="utf-8", errors="ignore")
+for alt, token in [
+    ("Fresh Oyster Mushroom", "PLACEHOLDER_OYSTER"),
+    ("Button Mushroom", "PLACEHOLDER_BUTTON"),
+    ("Mushroom Farm", "PLACEHOLDER_FARM"),
+]:
+    m = re.search(
+        r'<img src="(data:image/[^"]+)" alt="' + re.escape(alt) + r'">', original
+    )
+    if not m:
+        raise RuntimeError(f"Could not extract {alt} image")
+    html = html.replace(token, m.group(1))
+
+# Minified CSS
+board_css = (
+    "<style id=\"gift-hub-vip-board-style\">"
+    ".mushroomBoard{font-family:sans-serif;position:relative;width:min(96%,1240px);margin:20px auto 40px;padding:20px;border-radius:24px;background:linear-gradient(145deg,#fff,#f3f9f4);border:1px solid rgba(212,175,55,.3);box-shadow:0 15px 40px rgba(10,64,28,.12);overflow:hidden}"
+    ".boardHeader{position:relative;display:flex;align-items:center;gap:15px;padding:14px 20px;border-radius:18px;background:linear-gradient(135deg,#0a401c,#125a2d);color:#fff;box-shadow:0 8px 20px rgba(10,64,28,.2);border:1px solid rgba(212,175,55,.4)}"
+    ".boardLogo{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;font-size:28px;background:rgba(255,255,255,.15);border:2px solid #d4af37}"
+    ".boardBrand{font-weight:800;color:#fff;font-size:clamp(18px,2.5vw,26px);letter-spacing:.5px}"
+    ".boardTagline{font-weight:600;color:#d4af37;font-size:12px;margin-top:2px}"
+    ".boardBadge{margin-left:auto;background:linear-gradient(135deg,#d4af37,#f3e5ab);color:#0a401c;font-weight:800;font-size:12px;padding:6px 14px;border-radius:20px}"
+    ".boardTitle{text-align:center;padding:20px 10px 16px;display:flex;justify-content:center;align-items:center;gap:10px}"
+    ".boardTitle h2{margin:0;color:#0a401c;font-size:clamp(22px,3vw,34px);font-weight:800}"
+    ".boardTitle p{margin:2px 0 0;color:#55705f;font-size:14px;font-weight:600}"
+    ".boardImageGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;position:relative}"
+    ".boardImageCard{background:#fff;border:1px solid #e1efe3;border-radius:18px;padding:10px;box-shadow:0 8px 20px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}"
+    ".boardImageCard:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(10,64,28,.12);border-color:#b3dbc0}"
+    ".boardCardHeader{background:#f0f7f2;border-radius:10px;padding:6px;text-align:center;margin-bottom:8px}"
+    ".boardCardTitle{color:#0a401c;font-size:13px;font-weight:700}"
+    ".cardImgWrapper{overflow:hidden;border-radius:12px;position:relative}"
+    ".boardImageCard img{display:block;width:100%;height:165px;object-fit:cover;transition:transform .4s}"
+    ".boardImageCard:hover img{transform:scale(1.05)}"
+    ".boardCardText{padding:10px 4px 4px;text-align:center}"
+    ".boardCardText strong{display:block;color:#0a401c;font-size:17px;font-weight:700}"
+    ".boardCardText span{display:block;color:#627768;font-size:12px;line-height:1.3;margin-top:3px}"
+    ".boardPrice{align-self:center;margin:6px 0 10px;padding:5px 14px;border-radius:16px;background:#e8f5e9;color:#0a401c;font-size:16px;font-weight:800}"
+    ".boardPrice small{font-size:11px;color:#437050}"
+    ".neutralPrice{background:#f4f4f4;color:#555;font-size:12px}"
+    ".offerPrice{background:#fff3e0;color:#e65100;font-size:13px}"
+    ".boardButton{margin-top:auto;width:100%;border:none;border-radius:10px;padding:10px;background:linear-gradient(135deg,#0a401c,#166534);color:#fff;font-weight:700;font-size:13px;cursor:pointer;transition:background .2s}"
+    ".boardButton:hover{background:linear-gradient(135deg,#125a2d,#1e8242)}"
+    ".boardButton:active{transform:scale(.98)}"
+    ".actionBtn{background:linear-gradient(135deg,#d4af37,#b88954);color:#0a401c}"
+    ".secBtn{background:#edf5ee;color:#0a401c}"
+    ".highlightCard{border:1px solid rgba(212,175,55,.5);background:#fffdf7}"
+    ".offerHeader{background:#fef8e7}"
+    ".vipTag{position:absolute;top:8px;right:8px;background:#d32f2f;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:10px}"
+    ".boardBottom{margin-top:18px;padding:10px;text-align:center;border-radius:12px;background:rgba(10,64,28,.04);color:#0a401c;font-weight:700;font-size:12px}"
+    ".boardBottom span{color:#d4af37}"
+    "@media(max-width:980px){.boardImageGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}"
+    "@media(max-width:600px){.mushroomBoard{padding:12px;border-radius:16px}.boardHeader{flex-wrap:wrap;padding:10px}.boardBadge{margin-left:0;width:100%;text-align:center}.boardImageGrid{grid-template-columns:1fr;gap:12px}.boardImageCard img{height:200px}}"
+    "</style>"
+)
+
+html = html.replace("</head>", board_css + "\n</head>", 1)
+
+out.write_text(html, encoding="utf-8")
+
+print(f"✅ Minified file created: {out}")
+print(f"📦 Size: {out.stat().st_size/1024/1024:.2f} MB")
+                                    
