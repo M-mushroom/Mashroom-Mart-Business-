@@ -2,155 +2,626 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kundu Mushroom Farm</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#145c32">
+<meta name="description" content="Kundu Mushroom Farm — Fresh Mushroom, Online Order, Offers & Kundu Care Rewards">
+<title>Mushroom Care Farm | Fresh Mushroom & Online Order</title>
+<style>
+:root{--g:#176b35;--g2:#0f5429;--lime:#e9f7ed;--cream:#fffdf7;--ink:#153122;--muted:#66756b;--gold:#f4b942;--line:#e4eee7;--card:#fff;--shadow:0 14px 40px rgba(17,65,37,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,"Noto Sans Bengali",Arial,sans-serif;color:var(--ink);background:#f7faf8;line-height:1.55}
+a{text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 18px}
+.top{background:var(--g2);color:#fff;text-align:center;padding:8px;font-size:13px}.top b{color:#ffe39a}
+header{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:9px;color:var(--g);font-weight:900;font-size:18px}.brand i{font-style:normal;font-size:31px}.links{display:flex;gap:22px;font-size:14px;font-weight:800}.links a{color:#35463c}.links a:hover{color:var(--g)}.cart{border:0;border-radius:12px;background:var(--g);color:#fff;padding:11px 15px;font-weight:900;cursor:pointer}
+.hero{overflow:hidden;background:radial-gradient(circle at 85% 15%,#dff3e5 0,transparent 34%),linear-gradient(135deg,#eef9f1,#fff 62%);padding:60px 0 48px}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.pill{display:inline-block;background:#dcf2e3;color:var(--g);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.4px}
+h1{font-size:clamp(38px,6vw,66px);line-height:1.04;margin:14px 0;color:var(--ink)}.hero p{font-size:18px;color:var(--muted);max-width:650px}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:13px 18px;border-radius:13px;font-weight:900;border:1px solid var(--line);cursor:pointer}.primary{background:var(--g);color:#fff;border-color:var(--g)}.secondary{background:#fff;color:var(--g)}
+.heroVisual{position:relative}.heroBox{background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;text-align:center;box-shadow:var(--shadow)}.mushroom{font-size:125px;line-height:1}.heroBox h3{margin:5px 0;font-size:25px}.heroBox p{font-size:14px;margin:0 auto}.stamp{display:inline-block;margin-top:18px;padding:99px 13px;border-radius:12px;background:var(--lime);color:var(--g);font-weight:900}
+.float{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:15px;padding:10px 13px;font-size:12px;font-weight:900}.f1{left:-18px;top:30px}.f2{right:-12px;bottom:25px}
+.section{padding:62px 0}.head{text-align:center;margin-bottom:30px}.head h2{font-size:32px;margin:0;color:var(--ink)}.head p{margin:5px;color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:17px;box-shadow:var(--shadow)}.photo{height:180px;border-radius:16px;background:linear-gradient(135deg,#eff9f1,#dcefe2);display:flex;align-items:center;justify-content:center;font-size:85px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.card h3{margin:15px 0 4px}.desc{font-size:14px;color:var(--muted);min-height:43px}.price{font-size:23px;font-weight:950;color:var(--g)}.orderBtn{width:100%;margin-top:12px;padding:12px;border:0;border-radius:11px;background:var(--g);color:#fff;font-weight:900;cursor:pointer}
+.offer{background:linear-gradient(135deg,#123e24,#1b713b);color:#fff;border-radius:26px;padding:30px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;box-shadow:var(--shadow)}.offer h2{margin:0;font-size:30px}.offer p{color:#d6eadc}.offer .btn{background:var(--gold);color:#27351f;border:0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{text-align:center;background:#fff;border:1px solid var(--line);padding:22px 15px;border-radius:18px}.ico{font-size:34px}.feature b{display:block;margin:8px 0 3px}.feature p{margin:0;color:var(--muted);font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.aboutText,.listBox{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}.check{padding:10px 12px;background:#f0f8f2;border-radius:10px;margin:8px 0}
+.orderPanel{background:var(--cream);border:1px solid #f1e7ca;border-radius:24px;padding:28px}.orderGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:800;margin-bottom:4px}.field input,.field textarea{width:100%;border:0;outline:0;font:inherit;background:transparent}.full{grid-column:1/-1}
+.contact{background:#eaf6ed}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contactCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.notice{font-size:12px;color:var(--muted);background:#f3f7f4;padding:10px;border-radius:10px;margin-top:14px}
+footer{background:#102d1d;color:#fff;padding:35px 0;text-align:center}footer p{color:#bfd4c5;font-size:13px}
+.bottom{display:none}.toast{position:fixed;z-index:200;left:50%;bottom:25px;transform:translate(-50%,120px);background:#102d1d;color:#fff;padding:13px 17px;border-radius:13px;transition:.3s;box-shadow:var(--shadow)}.toast.show{transform:translate(-50%,0)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.48);z-index:150;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalBox{background:#fff;border-radius:22px;padding:24px;max-width:430px;width:100%;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:#eee;border-radius:50%;width:32px;height:32px;cursor:pointer}.modalBox h3{margin-top:5px}
+@media(max-width:800px){.links{display:none}.heroGrid,.about,.contactGrid{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.orderGrid{grid-template-columns:1fr}.full{grid-column:auto}.offer{grid-template-columns:1fr}.bottom{display:flex;position:fixed;z-index:100;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;justify-content:space-around;padding:8px 3px}.bottom a{text-align:center;font-size:10px;color:#405046;font-weight:800}.bottom span{display:block;font-size:19px}body{padding-bottom:62px}}
+@media(max-width:520px){.products{grid-template-columns:1fr}.hero{padding-top:40px}.heroBox{padding:22px}.mushroom{font-size:95px}.f1,.f2{display:none}}
 
-<!-- VIP Board Style CSS -->
-<style id="gift-hub-vip-board-style">
-.mushroomBoard{font-family:sans-serif;position:relative;width:min(96%,1240px);margin:20px auto 40px;padding:20px;border-radius:24px;background:linear-gradient(145deg,#fff,#f3f9f4);border:1px solid rgba(212,175,55,.3);box-shadow:0 15px 40px rgba(10,64,28,.12);overflow:hidden}
-.boardHeader{position:relative;display:flex;align-items:center;gap:15px;padding:14px 20px;border-radius:18px;background:linear-gradient(135deg,#0a401c,#125a2d);color:#fff;box-shadow:0 8px 20px rgba(10,64,28,.2);border:1px solid rgba(212,175,55,.4)}
-.boardLogo{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;font-size:28px;background:rgba(255,255,255,.15);border:2px solid #d4af37}
-.boardBrand{font-weight:800;color:#fff;font-size:clamp(18px,2.5vw,26px);letter-spacing:.5px}
-.boardTagline{font-weight:600;color:#d4af37;font-size:12px;margin-top:2px}
-.boardBadge{margin-left:auto;background:linear-gradient(135deg,#d4af37,#f3e5ab);color:#0a401c;font-weight:800;font-size:12px;padding:6px 14px;border-radius:20px}
-.boardTitle{text-align:center;padding:20px 10px 16px;display:flex;justify-content:center;align-items:center;gap:10px}
-.boardTitle h2{margin:0;color:#0a401c;font-size:clamp(22px,3vw,34px);font-weight:800}
-.boardTitle p{margin:2px 0 0;color:#55705f;font-size:14px;font-weight:600}
-.boardImageGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;position:relative}
-.boardImageCard{background:#fff;border:1px solid #e1efe3;border-radius:18px;padding:10px;box-shadow:0 8px 20px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
-.boardImageCard:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(10,64,28,.12);border-color:#b3dbc0}
-.boardCardHeader{background:#f0f7f2;border-radius:10px;padding:6px;text-align:center;margin-bottom:8px}
-.boardCardTitle{color:#0a401c;font-size:13px;font-weight:700}
-.cardImgWrapper{overflow:hidden;border-radius:12px;position:relative}
-.boardImageCard img{display:block;width:100%;height:165px;object-fit:cover;transition:transform .4s}
-.boardImageCard:hover img{transform:scale(1.05)}
-.boardCardText{padding:10px 4px 4px;text-align:center}
-.boardCardText strong{display:block;color:#0a401c;font-size:17px;font-weight:700}
-.boardCardText span{display:block;color:#627768;font-size:12px;line-height:1.3;margin-top:3px}
-.boardPrice{align-self:center;margin:6px 0 10px;padding:5px 14px;border-radius:16px;background:#e8f5e9;color:#0a401c;font-size:16px;font-weight:800}
-.boardPrice small{font-size:11px;color:#437050}
-.neutralPrice{background:#f4f4f4;color:#555;font-size:12px}
-.offerPrice{background:#fff3e0;color:#e65100;font-size:13px}
-.boardButton{margin-top:auto;width:100%;border:none;border-radius:10px;padding:10px;background:linear-gradient(135deg,#0a401c,#166534);color:#fff;font-weight:700;font-size:13px;cursor:pointer;transition:background .2s}
-.boardButton:hover{background:linear-gradient(135deg,#125a2d,#1e8242)}
-.boardButton:active{transform:scale(.98)}
-.actionBtn{background:linear-gradient(135deg,#d4af37,#b88954);color:#0a401c}
-.secBtn{background:#edf5ee;color:#0a401c}
-.highlightCard{border:1px solid rgba(212,175,55,.5);background:#fffdf7}
-.offerHeader{background:#fef8e7}
-.vipTag{position:absolute;top:8px;right:8px;background:#d32f2f;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:10px}
-.boardBottom{margin-top:18px;padding:10px;text-align:center;border-radius:12px;background:rgba(10,64,28,.04);color:#0a401c;font-weight:700;font-size:12px}
-.boardBottom span{color:#d4af37}
-@media(max-width:980px){.boardImageGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.mushroomBoard{padding:12px;border-radius:16px}.boardHeader{flex-wrap:wrap;padding:10px}.boardBadge{margin-left:0;width:100%;text-align:center}.boardImageGrid{grid-template-columns:1fr;gap:12px}.boardImageCard img{height:200px}}
+.dashboard{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;padding:12px;background:#f5faf6;border:1px solid #dbece0;border-radius:24px;box-shadow:inset 0 1px 0 #fff}
+.dashCard{display:flex;align-items:center;gap:11px;min-height:72px;padding:12px 13px;background:#fff;border:1px solid #e1ece4;border-radius:17px;color:var(--ink);box-shadow:0 5px 16px rgba(17,65,37,.07);transition:.18s;cursor:pointer;text-decoration:none;font-family:inherit;text-align:left;width:100%}
+.dashCard:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(17,65,37,.11);border-color:#b8d9c2}
+.dashIcon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:14px;background:#edf8ef;font-size:27px;margin:0}
+.dashInfo{min-width:0;text-align:left;flex:1 1 auto}.dashCard h3{font-size:15px;margin:0 0 3px;line-height:1.2}.dashCard p{font-size:11px;color:var(--muted);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dashGo{margin-left:auto;font-size:18px;color:var(--g);font-weight:900}
+@media(max-width:520px){.dashboard{gap:9px;padding:10px;border-radius:20px}.dashCard{min-height:67px;padding:10px}.dashIcon{width:39px;height:39px;flex-basis:39px;font-size:24px;border-radius:12px}.dashCard h3{font-size:14px}.dashCard p{font-size:10px}.dashGo{font-size:16px}}
+
+#products,#offers,#care,#about,#order,#contact{scroll-margin-top:82px}
+#products,#about,#contact{background:#f7faf8}
+#products .head,#about .aboutText,#contact .head{position:relative}
+#products{border-top:1px solid #e7efe9}
+#about{border-top:1px solid #e7efe9}
+#contact{border-top:1px solid #dfece3}
+
+.dashboard7{grid-template-columns:repeat(4,1fr)}
+.dashboard7 .dashCard:last-child{border-color:#cfe4d5;background:linear-gradient(135deg,#ffffff,#f4faf6)}
+.dashboard7 .dashCard:last-child .dashInfo b{display:inline-block;margin-top:5px;color:var(--g);font-size:12px}
+
+.dashboardSheet{position:fixed;inset:0;background:rgba(10,28,17,.52);backdrop-filter:blur(6px);z-index:1000;display:none;align-items:flex-end;justify-content:center;padding:14px}
+.dashboardSheet.show{display:flex}
+.sheetBox{width:min(920px,100%);max-height:90vh;overflow:auto;background:#f7faf8;border-radius:26px 26px 10px 10px;box-shadow:0 25px 80px rgba(0,0,0,.25);position:relative}
+.sheetTop{position:sticky;top:0;z-index:2;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sheetTop h3{margin:3px 0 0;font-size:20px}.sheetClose{width:40px;height:40px;border:0;border-radius:12px;background:#edf5ef;color:var(--g);font-size:28px;cursor:pointer}.sheetContent .section{padding:28px 0}.sheetContent .wrap{padding-left:18px;padding-right:18px}
+
+@media(max-width:760px){.dashboard7{grid-template-columns:repeat(2,1fr)}.dashCard{min-height:104px}.dashIcon{font-size:38px}.dashInfo h3{font-size:16px}.dashInfo p{font-size:12px}.sheetBox{max-height:92vh;border-radius:24px 24px 8px 8px}}
+@media(min-width:761px) and (max-width:980px){.dashboard7{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:761px){.dashboard7 .dashCard:last-child{grid-column:span 2}}
+
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.dashboard7{width:100%;max-width:100%;box-sizing:border-box;grid-template-columns:repeat(4,minmax(0,1fr))}
+.dashboard7>.dashCard{min-width:0;max-width:100%;box-sizing:border-box}
+.dashboard7 .dashInfo{min-width:0;max-width:100%;flex:1 1 auto}
+.dashboard7 .dashInfo h3,.dashboard7 .dashInfo p{overflow-wrap:anywhere;word-break:break-word}
+@media(max-width:760px){
+  .dashboard7{width:100%;max-width:100%;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;padding:10px!important;box-sizing:border-box!important}
+  .dashboard7>.dashCard{width:100%!important;min-width:0!important;max-width:100%!important;grid-column:auto!important;padding:10px!important;box-sizing:border-box!important}
+  .dashboard7 .dashInfo{min-width:0!important;max-width:100%!important;flex:1 1 0!important}
+  .dashboard7 .dashInfo h3,.dashboard7 .dashInfo p{white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+  .dashboard7 .dashGo{flex:0 0 auto;margin-left:auto}
+}
+
+.socialTop{display:flex;align-items:center;justify-content:center;gap:10px;padding:9px 10px!important;background:#fff!important;box-sizing:border-box;position:relative;z-index:9999;}
+.socialTop .topText{display:none!important;}
+.socialTopLinks{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;}
+.socialTopLinks a{display:flex!important;align-items:center;justify-content:center;padding:10px 18px!important;border-radius:12px!important;text-decoration:none!important;font-size:14px!important;font-weight:900!important;line-height:1!important;white-space:nowrap!important;box-sizing:border-box;min-width:125px;}
+.socialTopLinks a:first-child{background:#ff1744!important;color:#fff!important;border:1px solid #d50000!important;}
+.socialTopLinks a:last-child{background:#1877f2!important;color:#fff!important;border:1px solid #0d5dcc!important;}
+@media(max-width:520px){.socialTop{padding:8px 10px!important;}.socialTopLinks{gap:8px;}.socialTopLinks a{flex:1;min-width:0;padding:10px 8px!important;font-size:13px!important;}}
+
+/* ================================
+   KUNDU FARM — PREMIUM ANIMATION
+================================ */
+
+/* Hero mushroom floating */
+.heroBox{
+  animation: heroFloat 4s ease-in-out infinite;
+}
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+/* Mushroom gentle glow */
+.mushroom{
+  display:inline-block;
+  animation:mushroomPop 3s ease-in-out infinite;
+}
+@keyframes mushroomPop{
+  0%,100%{transform:scale(1) rotate(0)}
+  50%{transform:scale(1.04) rotate(-2deg)}
+}
+
+/* Floating badges */
+.float{
+  animation:badgeFloat 3s ease-in-out infinite;
+}
+.f2{animation-delay:1.2s}
+@keyframes badgeFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+/* Product cards */
+.card{
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(17,65,37,.15);
+}
+.card:hover .photo img{
+  transform:scale(1.06);
+}
+.photo img{
+  transition:transform .35s ease;
+}
+
+/* Fresh Today Badge */
+.freshBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-top:10px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#e9f7ed;
+  color:#176b35;
+  font-size:12px;
+  font-weight:900;
+  animation:freshPulse 2.5s ease-in-out infinite;
+}
+@keyframes freshPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(23,107,53,.12)}
+  50%{box-shadow:0 0 0 6px rgba(23,107,53,0)}
+}
+
+/* Add to cart button */
+.orderBtn{
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.orderBtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(23,107,53,.25);
+}
+.orderBtn:active{
+  transform:scale(.96);
+}
+
+/* Dashboard cards */
+.dashCard{
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.dashCard:hover{
+  transform:translateY(-4px);
+}
+.dashCard:active{
+  transform:scale(.97);
+}
+.dashIcon{
+  transition:transform .25s ease;
+}
+.dashCard:hover .dashIcon{
+  transform:scale(1.1) rotate(-3deg);
+}
+
+/* Rewards attention */
+.dashboard7 .dashCard:nth-child(3) .dashIcon{
+  animation:rewardPulse 2.2s ease-in-out infinite;
+}
+@keyframes rewardPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+}
+
+/* Gold offer shine */
+.offer{
+  position:relative;
+  overflow:hidden;
+}
+.offer:after{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-80%;
+  width:45%;
+  height:200%;
+  background:rgba(255,255,255,.16);
+  transform:rotate(20deg);
+  animation:offerShine 5s linear infinite;
+}
+@keyframes offerShine{
+  0%{left:-80%}
+  35%,100%{left:130%}
+}
+
+/* Toast entrance */
+.toast{
+  animation:none;
+}
+.toast.show{
+  animation:toastPop .3s ease-out;
+}
+@keyframes toastPop{
+  0%{opacity:0;transform:translate(-50%,120px) scale(.9)}
+  100%{opacity:1;transform:translate(-50%,0) scale(1)}
+}
+
+/* Smooth sheet opening */
+.dashboardSheet.show .sheetBox{
+  animation:sheetUp .28s ease-out;
+}
+@keyframes sheetUp{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Mobile bottom navigation */
+.bottom a{
+  transition:transform .2s ease,color .2s ease;
+}
+.bottom a:active{
+  transform:scale(.9);
+}
+.bottom a:hover{
+  color:var(--g);
+}
+
+/* Scroll reveal class */
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Reduced motion accessibility */
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
 </style>
 </head>
-
 <body>
+<div class="top socialTop">
+  <div class="topText">🍄 <b>আজকের ফ্রেশ মাশরুম</b> • Online Order • Kundu Care Rewards</div>
+  <div class="socialTopLinks">
+    <a href="https://youtu.be/TFJTk4hPq_0?si=jF7OASPGmkyl698K" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
+    <a href="https://www.facebook.com/profile.php?id=61555253776804" target="_blank" rel="noopener" aria-label="Facebook">f Facebook</a>
+  </div>
+</div>
 
-<!-- VIP Mushroom Gallery Board -->
-<div class="mushroomBoard">
-  <div class="boardHeader">
-    <div class="boardLogo">🍄</div>
-    <div>
-      <div class="boardBrand">KUNDU MUSHROOM FARM</div>
-      <div class="boardTagline">✨ PREMIUM QUALITY • ORGANIC • FRESH HARVEST ✨</div>
+<header><div class="wrap nav">
+<a class="brand" href="#"><i>🍄</i>Kundu Mushroom Farm</a>
+<nav class="links"><a href="#care" onclick="openDash('products');return false;">পণ্য</a><a href="#offers" onclick="openDash('offers');return false;">অফার</a><a href="#care" onclick="openRewardsDashboard();return false;">Kundu Care</a><a href="#about" onclick="openDash('about');return false;">আমাদের কথা</a><a href="#contact" onclick="openDash('contact');return false;">যোগাযোগ</a></nav>
+<div style="display:flex;gap:8px;align-items:center"><a class="btn secondary" style="padding:9px 12px" href="https://wa.me/917047643951" target="_blank" rel="noopener" aria-label="WhatsApp Support">💬</a><button class="cart" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap heroGrid">
+<div><span class="pill">FARM • FRESH • EASY ORDER</span><h1>প্রতিদিনের পাতে<br><span style="color:var(--g)">ফ্রেশ মাশরুম</span> 🍄</h1>
+<p>স্বাদ, গুণমান ও সহজ অনলাইন অর্ডার—সবকিছু এক জায়গায়। Kundu Mushroom Farm-এর পণ্য দেখুন এবং আপনার পছন্দের মাশরুম অর্ডার করুন।</p>
+<div class="actions"><a class="btn primary" href="#care">⭐ Dashboard</a><a class="btn secondary" href="#care" onclick="openDash('products');return false;">🍄 পণ্য দেখুন</a><a class="btn" href="https://kundu-mushroom-farm.store.shoopy.in" target="_blank" rel="noopener">🛍️ Shop</a></div></div>
+<div class="heroVisual"><div class="heroBox"><div class="mushroom">🍄</div><h3>স্বাস্থ্যে ভরা মাশরুম</h3><p>প্রতিদিন ফ্রেশ খামার থেকে অর্গানিক ভাবে প্রস্তুত।</p></div><div class="float f1">🌿 Fresh & Local</div><div class="float f2">🎁 Special Offers</div></div>
+</div></section>
+
+<section class="section" id="care">
+<div class="wrap">
+  <div class="head">
+    <h2>⭐ Dashboard</h2>
+    <p>একটি অপশনে ক্লিক করুন — প্রয়োজনীয় অংশটি খুলে যাবে</p>
+  </div>
+
+  <div class="dashboard dashboard7">
+    <button class="dashCard" type="button" onclick="openDash('products')">
+      <div class="dashIcon">🍄</div><div class="dashInfo"><h3>Fresh Mushroom</h3><p>পণ্য ও দাম দেখুন</p></div><span class="dashGo">›</span>
+    </button>
+
+    <button class="dashCard" type="button" onclick="openDash('order')">
+      <div class="dashIcon">🛒</div><div class="dashInfo"><h3>Easy Order</h3><p>দ্রুত অর্ডার করুন</p></div><span class="dashGo">›</span>
+    </button>
+
+    <button class="dashCard" type="button" onclick="openRewardsDashboard()">
+      <div class="dashIcon">🎁</div><div class="dashInfo"><h3>Kundu Care Rewards</h3><p>Offers & Rewards</p></div><span class="dashGo">›</span>
+    </button>
+
+    <a class="dashCard" href="https://wa.me/917047643951" target="_blank" rel="noopener">
+      <div class="dashIcon">📲</div><div class="dashInfo"><h3>WhatsApp</h3><p>সরাসরি যোগাযোগ</p></div><span class="dashGo">›</span>
+    </a>
+
+    <button class="dashCard" type="button" onclick="openDash('about')">
+      <div class="dashIcon">ℹ️</div><div class="dashInfo"><h3>About Kundu</h3><p>আমাদের সম্পর্কে</p></div><span class="dashGo">›</span>
+    </button>
+
+    <button class="dashCard" type="button" onclick="openDash('contact')">
+      <div class="dashIcon">📍</div><div class="dashInfo"><h3>Contact & Payment</h3><p>Phone, Maps & UPI</p></div><span class="dashGo">›</span>
+    </button>
+
+    <a class="dashCard" href="https://kundu-mushroom-farm.store.shoopy.in" target="_blank" rel="noopener">
+      <div class="dashIcon">🛍️</div><div class="dashInfo"><h3>Official Shop</h3><p>Shoopy Online Store</p></div><span class="dashGo">›</span>
+    </a>
+
+    <button class="dashCard" type="button" onclick="openDash('about')">
+      <div class="dashIcon">🍄</div><div class="dashInfo"><h3>Kundu Mushroom Farm</h3><p>Fresh Mushroom • Online Order • Kundu Care<br><b>✓ সহজ অর্ডার ব্যবস্থা</b></p></div><span class="dashGo">›</span>
+    </button>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer><div class="wrap"><strong>🍄 Kundu Mushroom Farm</strong><p>Fresh Mushroom • Online Order • Kundu Care Rewards</p><p>📞 7047643951 • 💳 UPI: bubaikundu635@okhdfcbank</p><p>© 2026 Kundu Mushroom Farm • All Rights Reserved</p></div></footer>
+
+<div class="bottom"><a href="#care"><span>🏠</span>Home</a><a href="#care" onclick="openDash('products');return false;"><span>🍄</span>Products</a><a href="#care" onclick="openRewardsDashboard();return false;"><span>🎁</span>Rewards</a><a href="https://wa.me/917047643951" target="_blank" rel="noopener"><span>💬</span>WhatsApp</a></div>
+<div id="toast" class="toast"></div>
+
+<!-- Cart Modal -->
+<div class="modal" id="cartModal"><div class="modalBox"><button class="close" onclick="closeCart()">×</button><h3>🛒 আপনার Cart</h3><div id="cartItems" style="margin-top:15px"></div><div style="margin-top:15px;font-size:18px;font-weight:900">Total: ₹<span id="total">0</span></div><div class="actions"><button class="btn primary" onclick="checkout()">📲 WhatsApp Checkout</button></div></div></div>
+
+<!-- Rewards Dashboard Modal -->
+<div class="modal" id="rewardsModal">
+  <div class="modalBox">
+    <button class="close" onclick="closeRewardsDashboard()">×</button>
+    <h3>🎁 Kundu Care Rewards</h3>
+    <p style="font-size:13px;color:var(--muted)">আপনার পছন্দের অফার বা রিওয়ার্ড অপশন বেছে নিন:</p>
+    <div style="display:grid;gap:10px;margin-top:15px">
+      <button class="btn primary" onclick="closeRewardsDashboard();openDash('offers');">🔥 আজকের অফার দেখুন</button>
+      <a class="btn secondary" href="https://wa.me/917047643951?text=Hello,%20I%20want%20to%20know%20about%20Kundu%20Care%20Rewards" target="_blank" rel="noopener">💬 WhatsApp Support</a>
     </div>
-    <div class="boardBadge">VIP CHOICE 🌿</div>
-  </div>
-
-  <div class="boardTitle">
-    <span>🍄</span>
-    <div>
-      <h2>আমাদের প্রিমিয়াম মাশরুম প্রোডাক্টস</h2>
-      <p>ফার্ম থেকে সরাসরি ফ্রেশ ও স্বাস্থ্যকর মাশরুম অর্ডার করুন</p>
-    </div>
-  </div>
-
-  <div class="boardImageGrid">
-    <!-- Card 1 -->
-    <article class="boardImageCard">
-      <div class="boardCardHeader"><span class="boardCardTitle">🍄 Fresh Oyster Mushroom</span></div>
-      <div class="cardImgWrapper">
-        <img src="./oyster.jpg" alt="Fresh Oyster Mushroom">
-      </div>
-      <div class="boardCardText">
-        <strong>ঝিনুক মাশরুম</strong>
-        <span>১০০% অর্গানিক ফ্রেশ ঝিনুক মাশরুম • 120 গ্রাম প্যাক</span>
-      </div>
-      <div class="boardPrice">₹20 <small>/ প্যাকেট</small></div>
-      <button class="boardButton" onclick="addCart('Fresh Oyster Mushroom',20)">🛒 Cart-এ যোগ করুন</button>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="boardImageCard">
-      <div class="boardCardHeader"><span class="boardCardTitle">🍄 Button Mushroom</span></div>
-      <div class="cardImgWrapper">
-        <img src="./button.jpg" alt="Button Mushroom">
-      </div>
-      <div class="boardCardText">
-        <strong>বাটন মাশরুম</strong>
-        <span>প্রিমিয়াম গ্রেড বাটন মাশরুম • 200 গ্রাম প্যাক</span>
-      </div>
-      <div class="boardPrice">₹55 <small>/ প্যাকেট</small></div>
-      <button class="boardButton actionBtn" onclick="scrollToOrder('Button Mushroom')">📲 সরাসরি অর্ডার করুন</button>
-    </article>
-
-    <!-- Card 3 -->
-    <article class="boardImageCard">
-      <div class="boardCardHeader"><span class="boardCardTitle">🌱 Mushroom Farm</span></div>
-      <div class="cardImgWrapper">
-        <img src="./oyster_farm.jpg" alt="Mushroom Farm">
-      </div>
-      <div class="boardCardText">
-        <strong>আমাদের ফার্মের দৃশ্য</strong>
-        <span>সম্পূর্ণ প্রাকৃতিক ও জীবাণুমুক্ত পরিবেশে উৎপাদিত</span>
-      </div>
-      <div class="boardPrice neutralPrice">হাইজিন সার্টিফাইড</div>
-      <button class="boardButton secBtn" onclick="document.querySelector('#about').scrollIntoView()">🌿 ফার্ম সম্পর্কে জানুন</button>
-    </article>
-
-    <!-- Card 4 -->
-    <article class="boardImageCard highlightCard">
-      <div class="boardCardHeader offerHeader"><span class="boardCardTitle">🎁 Special VIP Pack</span></div>
-      <div class="cardImgWrapper offerPhoto">
-        <img src="./oyster.jpg" alt="Special Offer Mushroom Pack">
-        <span class="vipTag">🔥 সেরা অফার</span>
-      </div>
-      <div class="boardCardText">
-        <strong>অফার ও রিওয়ার্ড প্যাক</strong>
-        <span>নিয়মিত গ্রাহকদের জন্য বিশেষ ছাড় ও উপহার সুবিধা</span>
-      </div>
-      <div class="boardPrice offerPrice">বিশেষ মুল্য ছাড়</div>
-      <button class="boardButton offerBtn" onclick="document.querySelector('#offers').scrollIntoView()">🎁 অফার আনলক করুন</button>
-    </article>
-  </div>
-
-  <div class="boardBottom">
-    🌟 <span>Fresh</span> • <span>Clean</span> • <span>100% Organic</span> • <span>Fast Home Delivery</span> 🌟
   </div>
 </div>
 
-<!-- Dummy Sections for Scroll Functionality -->
-<div id="about" style="padding: 40px 20px; text-align: center;">
-  <h3>🌿 আমাদের ফার্ম সম্পর্কে</h3>
-  <p>আমরা সম্পূর্ণ বৈজ্ঞানিক ও হাইজিনিক উপায়ে ফ্রেশ মাশরুম উৎপাদন করে থাকি।</p>
+<!-- Dynamic Sheet Popups for Sections -->
+<div class="dashboardSheet" id="sheet-products" onclick="if(event.target===this)closeDash('products')">
+  <div class="sheetBox">
+    <div class="sheetTop"><div><span class="pill">KUNDU MUSHROOM FARM</span><h3>🍄 Fresh Mushroom</h3></div><button class="sheetClose" onclick="closeDash('products')" aria-label="Close">×</button></div>
+    <div class="sheetContent"><section class="section" id="products"><div class="wrap"><div class="head"><h2>🍄 মাশরুমের পণ্য</h2><p>আপনার প্রয়োজন অনুযায়ী পণ্য বেছে নিন</p></div>
+
+<div class="products">
+  <div class="card">
+    <div class="photo">🍄</div>
+    <div class="freshBadge">🟢 Fresh Today</div>
+    <h3>ফ্রেশ অয়েস্টার মাশরুম (Oyster Mushroom)</h3>
+    <p class="desc">টাটকা ও পুষ্টিকর খামার থেকে সংগৃহীত।</p>
+    <div class="price">₹260 / কেজি</div>
+    <button class="orderBtn" onclick="addToCart('ফ্রেশ অয়েস্টার মাশরুম', 260)">🛒 Cart-এ যোগ করুন</button>
+  </div>
+  <div class="card">
+    <div class="photo">🍄</div>
+    <div class="freshBadge">🟢 Fresh Today</div>
+    <h3>ড্রাই অয়েস্টার মাশরুম (Dry Oyster)</h3>
+    <p class="desc">দীর্ঘদিন সংরক্ষণের জন্য উপযুক্ত প্রিমিয়াম ড্রাই মাশরুম।</p>
+    <div class="price">₹800 / কেজি</div>
+    <button class="orderBtn" onclick="addToCart('ড্রাই অয়েস্টার মাশরুম', 800)">🛒 Cart-এ যোগ করুন</button>
+  </div>
+  <div class="card">
+    <div class="photo">🌱</div>
+    <div class="freshBadge">🟢 Fresh Today</div>
+    <h3>মাশরুম স্পন / বীজ (Mushroom Spawn)</h3>
+    <p class="desc">উচ্চ ফলনশীল ও উন্নত মানের মাশরুম বীজ।</p>
+    <div class="price">₹120 / কেজি</div>
+    <button class="orderBtn" onclick="addToCart('মাশরুম স্পন', 120)">🛒 Cart-এ যোগ করুন</button>
+  </div>
 </div>
 
-<div id="offers" style="padding: 40px 20px; text-align: center; background: #fff8e7;">
-  <h3>🎁 চলতি অফারসমূহ</h3>
-  <p>আমাদের যেকোনো প্যাক বাল্ক অর্ডার করলে পাচ্ছেন ফ্রি ডেলিভারি!</p>
+</div></section></div>
+  </div>
 </div>
 
-<!-- Basic Script Handlers -->
+<div class="dashboardSheet" id="sheet-order" onclick="if(event.target===this)closeDash('order')">
+  <div class="sheetBox">
+    <div class="sheetTop"><div><span class="pill">KUNDU MUSHROOM FARM</span><h3>🛒 Easy Order</h3></div><button class="sheetClose" onclick="closeDash('order')" aria-label="Close">×</button></div>
+    <div class="sheetContent"><section class="section" id="order"><div class="wrap">
+      <div class="head"><h2>🛒 দ্রুত অর্ডার করুন</h2><p>আপনার তথ্য পূরণ করে সরাসরি অর্ডার বুক করুন</p></div>
+      <div class="orderPanel">
+        <form id="directOrderForm" onsubmit="submitDirectOrder(event)">
+          <div class="orderGrid">
+            <div class="field"><label>আপনার নাম</label><input type="text" id="custName" placeholder="আপনার নাম লিখুন" required></div>
+            <div class="field"><label>মোবাইল নম্বর</label><input type="tel" id="custPhone" placeholder="১০ ডিজিটের নম্বর" required></div>
+            <div class="field full"><label>পণ্য বেছে নিন</label>
+              <select id="custProduct" style="width:100%;border:0;outline:0;background:transparent;font:inherit;" required>
+                <option value="ফ্রেশ অয়েস্টার মাশরুম - ₹180/কেজি">ফ্রেশ অয়েস্টার মাশরুম (₹180/কেজি)</option>
+                <option value=" বাটন মাশরুম - ₹260/কেজি">বাটন মাশরুম (₹260/কেজি)</option>
+                <option value="মাশরুম স্পন - ₹200/কেজি">মাশরুম স্পন / বীজ (₹200/কেজি)</option>
+              </select>
+            </div>
+            <div class="field full"><label>পরিমাণ (কেজি/প্যাকেট)</label><input type="text" id="custQty" placeholder="যেমন: ২ কেজি" required></div>
+            <div class="field full"><label>সম্পূর্ণ ঠিকানা</label><textarea id="custAddress" rows="2" placeholder="আপনার ডেলিভারি ঠিকানা লিখুন" required></textarea></div>
+          </div>
+          <button type="submit" class="orderBtn" style="margin-top:20px;padding:15px;font-size:16px;">📲 WhatsApp-এ অর্ডার বুক করুন</button>
+        </form>
+      </div>
+    </div></section></div>
+  </div>
+</div>
+
+  <div class="dashboardSheet" id="sheet-offers" onclick="if(event.target===this)closeDash('offers')">
+  <div class="sheetBox">
+    <div class="sheetTop"><div><span class="pill">KUNDU MUSHROOM FARM</span><h3>🎁 Offers & Rewards</h3></div><button class="sheetClose" onclick="closeDash('offers')" aria-label="Close">×</button></div>
+    <div class="sheetContent"><section class="section" id="offers"><div class="wrap">
+      <div class="offer">
+        <div>
+          <h2>🎉 বিশেষ স্পেশাল অফার!</h2>
+          <p>1 কেজির বেশি ফ্রেশ মাশরুমের অর্ডারে পান বিশেষ ছাড়🎁 এবং Kundu Care রিওয়ার্ড Cashback💵 পয়েন্ট!</p>
+        </div>
+        <div><a class="btn" href="https://wa.me/917047643951?text=Hi,%20I%20want%20to%20claim%20the%20special%20offer" target="_blank" rel="noopener">অফার ক্লেইম করুন</a></div>
+      </div>
+    </div></section></div>
+  </div>
+</div>
+
+<div class="dashboardSheet" id="sheet-about" onclick="if(event.target===this)closeDash('about')">
+  <div class="sheetBox">
+    <div class="sheetTop"><div><span class="pill">KUNDU MUSHROOM FARM</span><h3>ℹ️ About Us</h3></div><button class="sheetClose" onclick="closeDash('about')" aria-label="Close">×</button></div>
+    <div class="sheetContent"><section class="section" id="about"><div class="wrap">
+      <div class="about">
+        <div class="aboutText">
+          <h2>আমাদের সম্পর্কে</h2>
+          <p>Kundu Mushroom Farm হলো সেরা মানের ফ্রেশ এবং প্রিমিয়াম মাশরুম উৎপাদক। আমরা সম্পূর্ণ স্বাস্থ্যকর ও অর্গানিক উপায়ে মাশরুম চাষ করি।</p>
+          <div class="check">✓ ১০০% অর্গানিক ও ফ্রেশ মাশরুম</div>
+          <div class="check">✓ দ্রুত ও নির্ভরযোগ্য হোম ডেলিভারি</div>
+          <div class="check">✓ খামার থেকে সরাসরি সংগৃহীত</div>
+        </div>
+        <div class="listBox">
+          <h3>কেন আমাদের মাশরুম বেছে নেবেন?</h3>
+          <p style="color:var(--muted);margin-top:10px;">আমরা গ্রাহকদের সর্বোচ্চ মানের ফ্রেশ মাশরুম সরবরাহ করতে প্রতিশ্রুতিবদ্ধ। যেকোনো বাল্ক অর্ডার বা চাষের পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+      </div>
+    </div></section></div>
+  </div>
+</div>
+
+<div class="dashboardSheet" id="sheet-contact" onclick="if(event.target===this)closeDash('contact')">
+  <div class="sheetBox">
+    <div class="sheetTop"><div><span class="pill">KUNDU MUSHROOM FARM</span><h3>📍 Contact & Payment</h3></div><button class="sheetClose" onclick="closeDash('contact')" aria-label="Close">×</button></div>
+    <div class="sheetContent"><section class="section" id="contact"><div class="wrap">
+      <div class="head"><h2>📍 যোগাযোগ ও পেমেন্ট তথ্য</h2><p>সরাসরি কল করুন অথবা UPI-এর মাধ্যমে পেমেন্ট করুন</p></div>
+      <div class="contactGrid">
+        <div class="contactCard">
+          <h3>📞 যোগাযোগের মাধ্যম</h3>
+          <p>মোবাইল / WhatsApp: <b>7047643951</b></p>
+          <p>ঠিকানা: Kundu Mushroom Farm</p>
+          <div class="notice">সহজ যোগাযোগের জন্য সরাসরি WhatsApp বাটনে ক্লিক করুন।</div>
+        </div>
+        <div class="contactCard">
+          <h3>💳 পেমেন্ট ডিটেইলস (UPI)</h3>
+          <p>UPI ID: <b style="color:var(--g)">bubaikundu635@okhdfcbank</b></p>
+          <p>PhonePe / Google Pay / Paytm / UPI এর মাধ্যমে গ্রহণ করা হয়।</p>
+        </div>
+      </div>
+    </div></section></div>
+  </div>
+</div>
+
 <script>
-function addCart(item, price) {
-  alert(item + ' (₹' + price + ') কার্টে যোগ করা হয়েছে!');
-}
-function scrollToOrder(item) {
-  alert(item + '-এর জন্য অর্ডার ফর্ম স্ক্রোল করা হচ্ছে...');
-}
-</script>
+let cart = [];
 
+function openDash(id) {
+  const el = document.getElementById('sheet-' + id);
+  if (el) {
+    el.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeDash(id) {
+  const el = document.getElementById('sheet-' + id);
+  if (el) {
+    el.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+}
+
+function openRewardsDashboard() {
+  document.getElementById('rewardsModal').classList.add('show');
+}
+
+function closeRewardsDashboard() {
+  document.getElementById('rewardsModal').classList.remove('show');
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+function addToCart(name, price) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ name, price, qty: 1 });
+  }
+  updateCart();
+  showToast(name + ' Cart-এ যোগ করা হয়েছে!');
+}
+
+function updateCart() {
+  const countEl = document.getElementById('cartCount');
+  const itemsEl = document.getElementById('cartItems');
+  const totalEl = document.getElementById('total');
+  
+  let totalQty = 0;
+  let totalPrice = 0;
+  let html = '';
+
+  cart.forEach((item) => {
+    totalQty += item.qty;
+    totalPrice += item.price * item.qty;
+    html += `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:14px;">
+      <span>${item.name} × ${item.qty}</span>
+      <b>₹${item.price * item.qty}</b>
+    </div>`;
+  });
+
+  countEl.innerText = totalQty;
+  totalEl.innerText = totalPrice;
+  itemsEl.innerHTML = html || '<p style="color:var(--muted)">Cart খালি রয়েছে</p>';
+
+  const cartButton = document.querySelector(".cart");
+  if (cartButton) {
+    cartButton.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(1.08)" },
+        { transform: "scale(1)" }
+      ],
+      {
+        duration: 350,
+        easing: "ease-out"
+      }
+    );
+  }
+}
+
+function openCart() {
+  document.getElementById('cartModal').classList.add('show');
+}
+
+function closeCart() {
+  document.getElementById('cartModal').classList.remove('show');
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    showToast('আপনার Cart খালি!');
+    return;
+  }
+  let message = 'Hello Kundu Mushroom Farm, I want to order:\n';
+  let total = 0;
+  cart.forEach(item => {
+    message += `- ${item.name} × ${item.qty} = ₹${item.price * item.qty}\n`;
+    total += item.price * item.qty;
+  });
+  message += `\nTotal: ₹${total}`;
+  const url = `https://wa.me/917047643951?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+function submitDirectOrder(e) {
+  e.preventDefault();
+  const name = document.getElementById('custName').value;
+  const phone = document.getElementById('custPhone').value;
+  const product = document.getElementById('custProduct').value;
+  const qty = document.getElementById('custQty').value;
+  const address = document.getElementById('custAddress').value;
+
+  const msg = `*নতুন অনলাইন অর্ডার - Kundu Mushroom Farm*\n\n` +
+              `👤 *নাম:* ${name}\n` +
+              `📞 *মোবাইল:* ${phone}\n` +
+              `🍄 *পণ্য:* ${product}\n` +
+              `⚖️ *পরিমাণ:* ${qty}\n` +
+              `📍 *ঠিকানা:* ${address}`;
+
+  const url = `https://wa.me/917047643951?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: .12
+});
+
+document.querySelectorAll(
+  ".card,.feature,.offer,.aboutText,.listBox,.contactCard,.dashCard"
+).forEach(el => {
+  el.classList.add("reveal");
+  revealObserver.observe(el);
+});
+</script>
 </body>
-</html>
+      </html>
+      
