@@ -15,7 +15,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f7faf8;
       color: #333;
     }
@@ -201,484 +201,7 @@
       }
     }
 
-    /* =====================================================
-       KUNDU MUSHROOM FARM — SALES BOOSTER HOME CSS
-    ===================================================== */
-    .kmf-sales{
-      max-width:1100px;
-      margin:0 auto;
-      padding:8px 10px 25px;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .kmf-sales-top{
-      position:relative;
-      overflow:hidden;
-      text-align:center;
-      padding:7px 10px;
-      border-radius:14px;
-      background:linear-gradient(90deg,#1b5e20,#2e7d32,#1b5e20);
-      color:#fff;
-      font-size:13px;
-      font-weight:800;
-      box-shadow:0 5px 18px rgba(27,94,32,.20);
-      margin-bottom:10px;
-    }
-    .kmf-sales-top span{
-      display:inline-block;
-      animation:kmfTopPulse 1.8s infinite;
-    }
-    @keyframes kmfTopPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-    }
-    .kmf-sales-hero{
-      position:relative;
-      overflow:hidden;
-      border-radius:28px;
-      padding:28px 16px 24px;
-      text-align:center;
-      background:
-        radial-gradient(circle at 10% 15%,rgba(102,187,106,.18),transparent 28%),
-        radial-gradient(circle at 90% 80%,rgba(255,193,7,.15),transparent 30%),
-        linear-gradient(135deg,#f1f8e9,#ffffff,#e8f5e9);
-      border:2px solid #c8e6c9;
-      box-shadow:0 10px 35px rgba(46,125,50,.14);
-    }
-    .kmf-sales-mushroom{
-      font-size:50px;
-      display:block;
-      animation:kmfMushroomFloat 3s infinite ease-in-out;
-    }
-    @keyframes kmfMushroomFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-    .kmf-sales-hero h1{
-      margin:5px 0 4px;
-      color:#1b5e20;
-      font-size:28px;
-      font-weight:900;
-    }
-    .kmf-sales-tagline{
-      color:#555;
-      font-size:14px;
-      margin:6px auto 15px;
-      line-height:1.6;
-      max-width:650px;
-    }
-    .kmf-sales-benefits{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:7px;
-      margin:12px 0;
-    }
-    .kmf-sales-badge {
-      background: #e8f5e9;
-      color: #1b5e20;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-      border: 1px solid #c8e6c9;
-    }
-
-    /* =========================================
-       KUNDU MUSHROOM SUPER APP CSS
-    ========================================= */
-    .kmf-super-app{
-      max-width:1100px;
-      margin:25px auto;
-      padding:12px;
-      font-family:Arial,"Noto Sans Bengali",sans-serif;
-    }
-    .kmf-super-head{
-      text-align:center;
-      padding:28px 15px;
-      border-radius:28px;
-      background:
-        radial-gradient(circle at top,#c8e6c9,transparent 60%),
-        linear-gradient(135deg,#ffffff,#f1fff3);
-      border:1px solid #b7dcb9;
-      box-shadow:0 10px 30px rgba(0,0,0,.07);
-    }
-    .kmf-super-logo{
-      font-size:48px;
-      animation:kmfSuperFloat 2.5s infinite ease-in-out;
-    }
-    @keyframes kmfSuperFloat{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-7px)}
-    }
-    .kmf-super-badge{
-      display:inline-block;
-      padding:6px 13px;
-      border-radius:20px;
-      background:#e8f5e9;
-      color:#1b5e20;
-      font-size:10px;
-      font-weight:900;
-    }
-    .kmf-super-head h2{
-      margin:8px 0 3px;
-      color:#1b5e20;
-      font-size:26px;
-    }
-    .kmf-super-head p{
-      margin:0;
-      color:#777;
-      font-size:12px;
-    }
-    .kmf-dashboard{
-      display:grid;
-      grid-template-columns:repeat(6,1fr);
-      gap:8px;
-      margin:13px 0;
-    }
-    .kmf-dashboard button{
-      min-height:95px;
-      border:1px solid #dcebdd;
-      border-radius:18px;
-      background:#fff;
-      cursor:pointer;
-      box-shadow:0 5px 17px rgba(0,0,0,.05);
-      transition:.3s;
-      padding:10px 5px;
-    }
-    .kmf-dashboard button:hover{
-      transform:translateY(-4px);
-      background:#f5fff6;
-      border-color:#a5d6a7;
-    }
-    .kmf-dashboard span{
-      display:block;
-      font-size:28px;
-      margin-bottom:5px;
-    }
-    .kmf-dashboard strong{
-      display:block;
-      color:#1b5e20;
-      font-size:11px;
-    }
-    .kmf-dashboard small{
-      display:block;
-      color:#888;
-      font-size:9px;
-      margin-top:3px;
-    }
-    .kmf-super-panel{
-      min-height:230px;
-      padding:18px;
-      border-radius:22px;
-      background:#fff;
-      border:1px solid #dcebdd;
-      box-shadow:0 7px 25px rgba(0,0,0,.06);
-    }
-    .kmf-panel-welcome{
-      text-align:center;
-      padding:35px 10px;
-    }
-    .kmf-panel-welcome > div{
-      font-size:45px;
-    }
-    .kmf-panel-welcome h3{
-      color:#1b5e20;
-      margin:8px 0;
-    }
-    .kmf-panel-welcome p{
-      color:#777;
-      font-size:12px;
-    }
-    .kmf-panel-title{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom:15px;
-    }
-    .kmf-panel-title-icon{
-      width:45px;
-      height:45px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#e8f5e9;
-      border-radius:14px;
-      font-size:25px;
-    }
-    .kmf-panel-title h3{
-      margin:0;
-      color:#1b5e20;
-      font-size:17px;
-    }
-    .kmf-panel-title small{
-      display:block;
-      color:#888;
-      font-size:10px;
-      margin-top:3px;
-    }
-    .kmf-product-options{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:9px;
-    }
-    .kmf-product-option{
-      padding:13px 8px;
-      border:1px solid #dcebdd;
-      border-radius:15px;
-      background:#f9fffa;
-      text-align:center;
-    }
-    .kmf-product-option span{
-      display:block;
-      font-size:28px;
-    }
-    .kmf-product-option strong{
-      display:block;
-      color:#1b5e20;
-      font-size:11px;
-      margin:5px 0;
-    }
-    .kmf-product-option small{
-      color:#777;
-      font-size:10px;
-    }
-    .kmf-product-option button{
-      width:100%;
-      margin-top:8px;
-      padding:8px;
-      border:0;
-      border-radius:10px;
-      background:#1b5e20;
-      color:#fff;
-      font-size:10px;
-      font-weight:900;
-      cursor:pointer;
-    }
-    .kmf-budget-input{
-      text-align:center;
-    }
-    .kmf-budget-input label{
-      display:block;
-      color:#555;
-      font-size:12px;
-      margin-bottom:7px;
-    }
-    .kmf-budget-input input{
-      width:100%;
-      box-sizing:border-box;
-      padding:13px;
-      border:1px solid #b7dcb9;
-      border-radius:13px;
-      text-align:center;
-      font-size:18px;
-      outline:none;
-    }
-    .kmf-budget-button{
-      width:100%;
-      margin-top:10px;
-      padding:12px;
-      border:0;
-      border-radius:13px;
-      background:#1b5e20;
-      color:white;
-      font-weight:900;
-      cursor:pointer;
-    }
-    .kmf-budget-result{
-      margin-top:13px;
-      padding:14px;
-      border-radius:15px;
-      background:#e8f5e9;
-      color:#333;
-      font-size:12px;
-      line-height:1.8;
-    }
-    .kmf-family-choice{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:8px;
-    }
-    .kmf-family-choice button{
-      padding:13px 5px;
-      border:1px solid #c8e6c9;
-      border-radius:14px;
-      background:#f8fff9;
-      color:#1b5e20;
-      cursor:pointer;
-      font-weight:900;
-    }
-    .kmf-family-result{
-      text-align:center;
-      margin-top:13px;
-      padding:16px;
-      border-radius:16px;
-      background:#e8f5e9;
-      color:#1b5e20;
-      font-size:13px;
-      font-weight:800;
-    }
-    .kmf-recipe-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-    .kmf-recipe-card{
-      padding:15px;
-      border-radius:16px;
-      background:#fffdf5;
-      border:1px solid #eee0b5;
-    }
-    .kmf-recipe-card strong{
-      display:block;
-      color:#795548;
-      margin-bottom:5px;
-    }
-    .kmf-recipe-card small{
-      color:#777;
-      line-height:1.6;
-    }
-    .kmf-farm-timeline{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:6px;
-      text-align:center;
-    }
-    .kmf-farm-step{
-      position:relative;
-    }
-    .kmf-farm-step-icon{
-      width:50px;
-      height:50px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#e8f5e9;
-      font-size:25px;
-    }
-    .kmf-farm-step strong{
-      display:block;
-      color:#1b5e20;
-      font-size:10px;
-      margin-top:6px;
-    }
-    .kmf-farm-step small{
-      color:#888;
-      font-size:8px;
-    }
-    .kmf-reorder-card{
-      padding:15px;
-      border-radius:17px;
-      background:#f8fff9;
-      border:1px solid #dcebdd;
-    }
-    .kmf-reorder-card strong{
-      display:block;
-      color:#1b5e20;
-      font-size:14px;
-    }
-    .kmf-reorder-card small{
-      display:block;
-      color:#777;
-      margin-top:4px;
-    }
-    .kmf-reorder-card button{
-      width:100%;
-      margin-top:10px;
-      padding:10px;
-      border:0;
-      border-radius:12px;
-      background:#1b5e20;
-      color:#fff;
-      font-weight:900;
-    }
-    .kmf-super-delivery{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-top:13px;
-      padding:15px;
-      border-radius:20px;
-      background:linear-gradient(135deg,#e8f5e9,#fff);
-      border:1px solid #a5d6a7;
-    }
-    .kmf-delivery-bike{
-      font-size:35px;
-    }
-    .kmf-super-delivery strong{
-      display:block;
-      color:#1b5e20;
-      font-size:15px;
-    }
-    .kmf-super-delivery small{
-      display:block;
-      color:#777;
-      font-size:10px;
-      margin-top:3px;
-    }
-    .kmf-super-order{
-      text-align:center;
-      margin-top:13px;
-      padding:25px 15px;
-      border-radius:25px;
-      background:
-        radial-gradient(circle at top,#c8e6c9,transparent 60%),
-        #f8fff9;
-      border:1px solid #a5d6a7;
-    }
-    .kmf-super-order-icon{
-      font-size:40px;
-    }
-    .kmf-super-order h3{
-      color:#1b5e20;
-      margin:6px 0;
-    }
-    .kmf-super-order p{
-      color:#777;
-      font-size:11px;
-    }
-    .kmf-super-order button{
-      border:0;
-      padding:12px 22px;
-      border-radius:25px;
-      background:#1b5e20;
-      color:#fff;
-      font-weight:900;
-      cursor:pointer;
-    }
-
-    @media(max-width:700px){
-      .kmf-super-app{
-        padding:7px;
-      }
-      .kmf-dashboard{
-        grid-template-columns:repeat(3,1fr);
-      }
-      .kmf-dashboard button{
-        min-height:90px;
-      }
-      .kmf-product-options{
-        grid-template-columns:1fr 1fr;
-      }
-      .kmf-family-choice{
-        grid-template-columns:1fr 1fr;
-      }
-      .kmf-farm-timeline{
-        display:flex;
-        overflow-x:auto;
-        padding-bottom:5px;
-      }
-      .kmf-farm-step{
-        min-width:75px;
-      }
-      .kmf-recipe-grid{
-        grid-template-columns:1fr;
-      }
-      .kmf-super-head h2{
-        font-size:22px;
-      }
-    }/* =========================================================
+    /* =========================================================
        2. 🍄 MUSHROOM PRODUCTS STYLE
     ========================================================= */
     .productsSection {
@@ -1088,7 +611,7 @@
       .rewardOptionInfo h3{ font-size:11px; }
       .rewardOptionInfo p{ font-size:9px; }
       .rewardClickBtn{ min-width:84px; padding:6px 9px; font-size:9px; }
-  }/* =========================================================
+    }  /* =========================================================
        4. 📍 CONTACT & PAYMENT STYLE
     ========================================================= */
     .contactPaymentBox {
@@ -1290,7 +813,9 @@
       .aboutHero { padding: 17px 12px; }
       .aboutHero h2 { font-size: 22px; }
       .aboutOffer { align-items: flex-start; }
-      } /* =========================================
+    }
+
+    /* =========================================
        ORDER OVERLAY POPUP SYSTEM
     ========================================= */
     .order-overlay {
@@ -1444,9 +969,8 @@
       cursor: pointer;
       font-size: 12px;
       margin-bottom: 10px;
-    }
-
-    /* =========================================
+  }
+  /* =========================================
        🎁 REWARD POPUP SYSTEM
     ========================================= */
     .reward-overlay{
@@ -1605,11 +1129,481 @@
       .reward-cash{ font-size:21px; }
       .reward-description{ font-size:14px; margin-left:18px; margin-right:18px; }
     }
+
+    /* =====================================================
+       KUNDU LIVE TRUST ZONE
+    ===================================================== */
+    .kmf-live-trust-zone{
+      max-width:1100px;
+      margin:18px auto;
+      padding:10px;
+      font-family:Arial,"Noto Sans Bengali",sans-serif;
+    }
+
+    /* FREE DELIVERY */
+    .kmf-free-delivery-banner{
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      gap:15px;
+      padding:17px 18px;
+      border-radius:22px;
+      background: linear-gradient(135deg,#e8f5e9,#ffffff,#e8f5e9);
+      border:1px solid #9ccc9e;
+      box-shadow:0 8px 28px rgba(27,94,32,.12);
+    }
+    .kmf-delivery-glow{
+      position:absolute;
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:#66bb6a;
+      opacity:.13;
+      right:80px;
+      top:-40px;
+      animation:kmfDeliveryGlow 2.5s infinite;
+    }
+    @keyframes kmfDeliveryGlow{
+      0%,100%{ transform:scale(1); opacity:.12; }
+      50%{ transform:scale(1.7); opacity:.22; }
+    }
+    .kmf-delivery-icon{
+      font-size:43px;
+      animation:kmfBikeMove 2s infinite ease-in-out;
+      z-index:1;
+    }
+    @keyframes kmfBikeMove{
+      0%,100%{transform:translateX(0) rotate(0deg)}
+      25%{transform:translateX(4px) rotate(-2deg)}
+      50%{transform:translateX(0) rotate(2deg)}
+      75%{transform:translateX(-3px) rotate(-1deg)}
+    }
+    .kmf-delivery-content{
+      flex:1;
+      z-index:1;
+    }
+    .kmf-delivery-content span{
+      display:inline-block;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.5px;
+      color:#2e7d32;
+      margin-bottom:3px;
+    }
+    .kmf-delivery-content h2{
+      margin:0;
+      color:#1b5e20;
+      font-size:21px;
+      font-weight:900;
+    }
+    .kmf-delivery-content p{
+      margin:4px 0 0;
+      color:#666;
+      font-size:10px;
+    }
+    .kmf-delivery-badge{
+      min-width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:#1b5e20;
+      color:white;
+      font-size:12px;
+      font-weight:900;
+      box-shadow:0 0 0 6px #e8f5e9;
+      animation:kmfFreePulse 1.8s infinite;
+      z-index:1;
+    }
+    .kmf-delivery-badge small{
+      font-size:7px;
+      margin-top:2px;
+    }
+    @keyframes kmfFreePulse{
+      0%,100%{ transform:scale(1); }
+      50%{ transform:scale(1.08); }
+    }
+
+    /* TODAY OFFER */
+    .kmf-today-offer{
+      position:relative;
+      overflow:hidden;
+      margin-top:13px;
+      padding:22px 15px;
+      text-align:center;
+      border-radius:25px;
+      background:
+        radial-gradient(circle at 10% 10%,rgba(255,193,7,.18),transparent 25%),
+        radial-gradient(circle at 90% 90%,rgba(76,175,80,.16),transparent 30%),
+        linear-gradient(135deg,#ffffff,#f7fff8);
+      border:1px solid #c8e6c9;
+      box-shadow:0 9px 30px rgba(0,0,0,.07);
+    }
+    .kmf-today-offer:before{
+      content:"";
+      position:absolute;
+      width:80px;
+      height:250px;
+      top:-80px;
+      left:-100px;
+      background:rgba(255,255,255,.7);
+      transform:rotate(25deg);
+      animation:kmfOfferShine 4s infinite;
+    }
+    @keyframes kmfOfferShine{
+      0%{left:-120px}
+      45%,100%{left:120%}
+    }
+    .kmf-offer-top{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 11px;
+      border-radius:20px;
+      background:#fff3cd;
+      color:#795548;
+      font-size:10px;
+      font-weight:800;
+    }
+    .kmf-live-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#e53935;
+      animation:kmfLivePulse 1s infinite;
+    }
+    @keyframes kmfLivePulse{
+      0%{ box-shadow:0 0 0 0 rgba(229,57,53,.5); }
+      70%{ box-shadow:0 0 0 8px rgba(229,57,53,0); }
+      100%{ box-shadow:0 0 0 0 rgba(229,57,53,0); }
+    }
+    .kmf-offer-icon{
+      position:relative;
+      font-size:40px;
+      margin-top:9px;
+      animation:kmfGiftBounce 1.8s infinite;
+    }
+    @keyframes kmfGiftBounce{
+      0%,100%{transform:translateY(0) rotate(0)}
+      40%{transform:translateY(-8px) rotate(-4deg)}
+      60%{transform:translateY(-3px) rotate(4deg)}
+    }
+    .kmf-today-offer h2{
+      position:relative;
+      margin:5px 0;
+      color:#1b5e20;
+      font-size:22px;
+    }
+    .kmf-offer-highlight{
+      position:relative;
+      display:inline-block;
+      margin:5px auto;
+      padding:8px 15px;
+      border-radius:30px;
+      background:#1b5e20;
+      color:#fff;
+      font-size:15px;
+      font-weight:900;
+      box-shadow:0 5px 15px rgba(27,94,32,.2);
+      animation:kmfHighlight 2s infinite;
+    }
+    @keyframes kmfHighlight{
+      0%,100%{transform:scale(1)}
+      50%{transform:scale(1.035)}
+    }
+    .kmf-today-offer p{
+      position:relative;
+      max-width:650px;
+      margin:9px auto;
+      color:#666;
+      font-size:12px;
+      line-height:1.7;
+    }
+    .kmf-today-offer p strong{
+      color:#1b5e20;
+    }
+    .kmf-offer-features{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:7px;
+      margin:13px 0;
+    }
+    .kmf-offer-features span{
+      padding:7px 10px;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid #dcebdd;
+      color:#1b5e20;
+      font-size:9px;
+      font-weight:800;
+    }
+    .kmf-offer-button{
+      position:relative;
+      border:0;
+      padding:12px 22px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#2e7d32,#1b5e20);
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 7px 20px rgba(27,94,32,.25);
+      animation:kmfOrderPulse 2s infinite;
+    }
+    @keyframes kmfOrderPulse{
+      0%,100%{ box-shadow:0 7px 20px rgba(27,94,32,.25); }
+      50%{ box-shadow:0 7px 28px rgba(27,94,32,.45); }
+    }
+    .kmf-offer-note{
+      position:relative;
+      display:block;
+      margin-top:10px;
+      color:#888;
+      font-size:8px;
+    }
+
+    /* REVIEW SECTION */
+    .kmf-real-review-section{
+      margin-top:13px;
+      padding:20px 12px;
+      border-radius:25px;
+      background:
+        radial-gradient(circle at top,#e8f5e9,transparent 55%),
+        #ffffff;
+      border:1px solid #d5e8d6;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+    .kmf-review-heading{
+      text-align:center;
+    }
+    .kmf-review-crown{
+      font-size:35px;
+      animation:kmfCrown 2s infinite;
+    }
+    @keyframes kmfCrown{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-5px) rotate(2deg)}
+    }
+    .kmf-review-heading h2{
+      margin:3px 0;
+      color:#1b5e20;
+      font-size:22px;
+    }
+    .kmf-review-stars{
+      font-size:18px;
+      letter-spacing:2px;
+    }
+    .kmf-review-heading p{
+      margin:5px 0;
+      color:#777;
+      font-size:10px;
+    }
+    .kmf-review-live{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:6px;
+      padding:5px 10px;
+      border-radius:20px;
+      background:#f5f5f5;
+      color:#666;
+      font-size:8px;
+      font-weight:900;
+    }
+    .kmf-review-live span{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#e53935;
+      animation:kmfLivePulse 1s infinite;
+    }
+
+    /* REVIEW CARD */
+    .kmf-review-display{
+      position:relative;
+      max-width:650px;
+      min-height:190px;
+      margin:15px auto 0;
+      padding:22px 18px 15px;
+      box-sizing:border-box;
+      border-radius:22px;
+      background:linear-gradient(135deg,#fafffa,#ffffff);
+      border:1px solid #dcebdd;
+      box-shadow:0 7px 25px rgba(0,0,0,.07);
+      text-align:center;
+    }
+    .kmf-review-quote{
+      position:absolute;
+      top:2px;
+      left:15px;
+      color:#a5d6a7;
+      font-family:Georgia,serif;
+      font-size:45px;
+      line-height:1;
+    }
+    .kmf-review-display-stars{
+      font-size:16px;
+      margin-bottom:8px;
+    }
+    #kmfReviewText{
+      min-height:48px;
+      margin:0 auto 12px;
+      max-width:560px;
+      color:#444;
+      font-size:13px;
+      line-height:1.7;
+      font-weight:600;
+    }
+    .kmf-review-person{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:9px;
+      text-align:left;
+    }
+    .kmf-review-avatar{
+      width:38px;
+      height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#e8f5e9;
+      font-size:20px;
+    }
+    .kmf-review-person strong{
+      display:block;
+      color:#1b5e20;
+      font-size:11px;
+    }
+    .kmf-review-person small{
+      display:block;
+      color:#888;
+      font-size:9px;
+      margin-top:2px;
+    }
+    .kmf-review-progress{
+      height:3px;
+      margin-top:14px;
+      background:#e8f5e9;
+      border-radius:10px;
+      overflow:hidden;
+    }
+    #kmfReviewProgress{
+      height:100%;
+      width:0;
+      background:#2e7d32;
+    }
+    .kmf-review-counter{
+      display:block;
+      margin-top:6px;
+      color:#999;
+      font-size:8px;
+    }
+
+    /* CONSENT */
+    .kmf-review-consent{
+      max-width:650px;
+      margin:11px auto 0;
+      display:flex;
+      gap:9px;
+      padding:11px;
+      box-sizing:border-box;
+      border-radius:15px;
+      background:#f8fff9;
+      border:1px solid #e0eee1;
+    }
+    .kmf-review-consent > span{
+      font-size:22px;
+    }
+    .kmf-review-consent strong{
+      display:block;
+      color:#1b5e20;
+      font-size:10px;
+    }
+    .kmf-review-consent p{
+      margin:3px 0 0;
+      color:#777;
+      font-size:9px;
+      line-height:1.5;
+    }
+
+    /* SUBMIT */
+    .kmf-review-submit{
+      max-width:650px;
+      margin:12px auto 0;
+      padding:15px;
+      text-align:center;
+      border-radius:18px;
+      background:#e8f5e9;
+    }
+    .kmf-review-submit h3{
+      margin:0;
+      color:#1b5e20;
+      font-size:14px;
+    }
+    .kmf-review-submit p{
+      margin:5px 0 10px;
+      color:#777;
+      font-size:10px;
+    }
+    .kmf-review-submit a{
+      display:inline-block;
+      padding:9px 15px;
+      border-radius:25px;
+      background:#1b5e20;
+      color:#fff;
+      text-decoration:none;
+      font-size:10px;
+      font-weight:900;
+    }
+
+    /* MOBILE */
+    @media(max-width:700px){
+      .kmf-free-delivery-banner{
+        padding:14px 10px;
+        gap:9px;
+      }
+      .kmf-delivery-icon{
+        font-size:33px;
+      }
+      .kmf-delivery-content h2{
+        font-size:16px;
+      }
+      .kmf-delivery-content p{
+        font-size:8px;
+      }
+      .kmf-delivery-badge{
+        min-width:52px;
+        height:52px;
+        font-size:9px;
+      }
+      .kmf-delivery-badge small{
+        font-size:6px;
+      }
+      .kmf-today-offer h2{
+        font-size:19px;
+      }
+      .kmf-offer-highlight{
+        font-size:12px;
+      }
+      .kmf-offer-features{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+      }
+      .kmf-review-display{
+        min-height:205px;
+      }
+    }
   </style>
 </head>
-<body>
-
-  <!-- Toast Notification -->
+<body><!-- Toast Notification -->
   <div id="toast"></div>
 
   <!-- =========================================================
@@ -1657,120 +1651,6 @@
     </a>
 
   </div>
-  <!-- =====================================================
-       KUNDU MUSHROOM FARM — SALES BOOSTER HOME
-  ===================================================== -->
-  <div class="kmf-sales">
-    <div class="kmf-sales-top">
-      <span>🎉 আজকের বিশেষ অফার: ১ কেজি বা তার বেশি অর্ডারে বিশেষ ছাড় ও Cashback! 🚀</span>
-    </div>
-
-    <div class="kmf-sales-hero">
-      <span class="kmf-sales-mushroom">🍄</span>
-      <h1>Kundu Mushroom Farm</h1>
-      <p class="kmf-sales-tagline">১০০% অর্গানিক, ১০০% ফ্রেশ খামারের মাশরুম। আপনার স্বাস্থ্যের যত্ন নিন সেরা মাশরুম দিয়ে।</p>
-      
-      <div class="kmf-sales-benefits">
-        <span class="kmf-sales-badge">🌱 ১০০% অর্গানিক</span>
-        <span class="kmf-sales-badge">🚴‍♂️ দ্রুত ডেলিভারি</span>
-        <span class="kmf-sales-badge">💯 প্রিমিয়াম কোয়ালিটি</span>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- =========================================
-       KUNDU MUSHROOM SUPER APP
-  ========================================= -->
-  <section class="kmf-super-app" id="kmfSuperApp">
-
-    <div class="kmf-super-head">
-      <div class="kmf-super-logo">🍄</div>
-      <span class="kmf-super-badge">KUNDU CARE • SMART SYSTEM</span>
-      <h2>Kundu Mushroom Super App</h2>
-      <p>🍄 Shop • 🛒 Order • 🎁 Reward • 🍳 Recipe • 👨‍🌾 Farm</p>
-    </div>
-
-    <!-- QUICK DASHBOARD -->
-    <div class="kmf-dashboard">
-
-      <button onclick="kmfSuperOpen('shop')">
-        <span>🍄</span>
-        <strong>Shop</strong>
-        <small>Mushroom</small>
-      </button>
-
-      <button onclick="kmfSuperOpen('budget')">
-        <span>🧮</span>
-        <strong>Budget</strong>
-        <small>Planner</small>
-      </button>
-
-      <button onclick="kmfSuperOpen('family')">
-        <span>👨‍👩‍👧</span>
-        <strong>Family</strong>
-        <small>Quantity</small>
-      </button>
-
-      <button onclick="kmfSuperOpen('recipe')">
-        <span>🍳</span>
-        <strong>Recipe</strong>
-        <small>Ideas</small>
-      </button>
-
-      <button onclick="kmfSuperOpen('farm')">
-        <span>👨‍🌾</span>
-        <strong>Farm</strong>
-        <small>Journey</small>
-      </button>
-
-      <button onclick="kmfSuperOpen('reorder')">
-        <span>🔄</span>
-        <strong>Re-Order</strong>
-        <small>Quick Order</small>
-      </button>
-
-    </div>
-
-    <!-- DYNAMIC PANEL -->
-    <div id="kmfSuperPanel" class="kmf-super-panel">
-
-      <div class="kmf-panel-welcome">
-        <div>🍄</div>
-        <h3>স্বাগতম Kundu Mushroom Farm-এ</h3>
-        <p>
-          উপরের যেকোনো System নির্বাচন করুন।
-          আপনার প্রয়োজন অনুযায়ী Mushroom নির্বাচন করুন।
-        </p>
-      </div>
-
-    </div>
-
-    <!-- DELIVERY HIGHLIGHT -->
-    <div class="kmf-super-delivery">
-      <div class="kmf-delivery-bike">🏍️</div>
-      <div>
-        <strong>8 KM পর্যন্ত FREE DELIVERY</strong>
-        <small>
-          Delivery availability অর্ডারের সময় নিশ্চিত করুন।
-        </small>
-      </div>
-    </div>
-
-    <!-- MAIN ORDER -->
-    <div class="kmf-super-order">
-      <div class="kmf-super-order-icon">🍄</div>
-      <h3>Fresh Mushroom নিতে প্রস্তুত?</h3>
-      <p>
-        পছন্দের Mushroom নির্বাচন করে
-        Quantity ঠিক করুন এবং সহজে Order করুন।
-      </p>
-      <button onclick="kmfSuperGoProducts()">
-        🛒 এখনই Mushroom Order করুন
-      </button>
-    </div>
-
-  </section>
 
 
   <!-- =========================================================
@@ -1808,7 +1688,9 @@
             🛒 Cart-এ যোগ করুন
           </button>
         </div>
-  </div>
+      </div>
+
+
       <!-- 2. Mushroom Trimmings -->
       <div class="productCard">
         <div class="productImage">
@@ -1937,6 +1819,186 @@
   </section>
 
 
+  <!-- =====================================================
+       KUNDU MUSHROOM FARM • LIVE OFFER + REAL REVIEW
+  ===================================================== -->
+  <section class="kmf-live-trust-zone">
+
+    <!-- FREE DELIVERY -->
+    <div class="kmf-free-delivery-banner">
+
+      <div class="kmf-delivery-glow"></div>
+
+      <div class="kmf-delivery-icon">🏍️</div>
+
+      <div class="kmf-delivery-content">
+        <span>🎉 SPECIAL DELIVERY BENEFIT</span>
+        <h2>8 KM পর্যন্ত FREE DELIVERY</h2>
+        <p>আপনার অর্ডারের জন্য প্রযোজ্য হলে Delivery Charge FREE</p>
+      </div>
+
+      <div class="kmf-delivery-badge">
+        FREE
+        <small>DELIVERY</small>
+      </div>
+
+    </div>
+
+
+    <!-- TODAY OFFER -->
+    <div class="kmf-today-offer">
+
+      <div class="kmf-offer-top">
+        <span class="kmf-live-dot"></span>
+        <strong>LIVE OFFER</strong>
+        <span>আজকের বিশেষ অফার</span>
+      </div>
+
+      <div class="kmf-offer-icon">🎁</div>
+
+      <h2>
+        🎉 আজকের বিশেষ অফার 🛒 
+      </h2>
+
+      <div class="kmf-offer-highlight">
+        500 Gm থেকে 1 কেজি বা তার বেশি
+      </div>
+
+      <p>
+        অর্ডারের ক্ষেত্রে প্রযোজ্য হলে
+        <strong>বিশেষ ছাড় ও Cashback</strong>
+        পাওয়ার সুযোগ থাকতে পারে।
+      </p>
+
+      <div class="kmf-offer-features">
+        <span>🍄 Fresh Mushroom</span>
+        <span>💰 Special Discount</span>
+        <span>🎁 Cashback</span>
+        <span>🏍️ Delivery Benefit</span>
+      </div>
+
+      <button
+        onclick="kmfOfferOrder()"
+        class="kmf-offer-button">
+        🛒 অফার সহ অর্ডার করুন
+      </button>
+
+      <small class="kmf-offer-note">
+        *ছাড়/Cashback-এর শর্ত, যোগ্যতা ও প্রাপ্যতা অর্ডারের 🛒 সময় নিশ্চিত করুন।
+      </small>
+
+    </div>
+
+
+    <!-- REAL CUSTOMER REVIEW -->
+    <div class="kmf-real-review-section">
+
+      <div class="kmf-review-heading">
+
+        <div class="kmf-review-crown">🏆</div>
+
+        <h2>Real Customer Review</h2>
+
+        <div class="kmf-review-stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p>
+          প্রকৃত ক্রেতাদের অনুমতি নিয়ে প্রকাশিত অভিজ্ঞতা
+        </p>
+
+        <div class="kmf-review-live">
+          <span></span>
+          LIVE CUSTOMER EXPERIENCE
+        </div>
+
+      </div>
+
+
+      <!-- REVIEW DISPLAY -->
+      <div class="kmf-review-display">
+
+        <div class="kmf-review-quote">“</div>
+
+        <div id="kmfReviewStars" class="kmf-review-display-stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p id="kmfReviewText">
+          প্রকৃত ক্রেতার অনুমোদিত Review এখানে প্রদর্শিত হবে।
+        </p>
+
+        <div class="kmf-review-person">
+
+          <div id="kmfReviewAvatar" class="kmf-review-avatar">
+            👤
+          </div>
+
+          <div>
+            <strong id="kmfReviewName">
+              Verified Customer
+            </strong>
+
+            <small id="kmfReviewArea">
+              Customer Review
+            </small>
+          </div>
+
+        </div>
+
+        <div class="kmf-review-progress">
+          <div id="kmfReviewProgress"></div>
+        </div>
+
+        <small class="kmf-review-counter">
+          Customer Experience
+          <span id="kmfReviewNumber">1</span>/25
+        </small>
+
+      </div>
+
+
+      <!-- CONSENT NOTE -->
+      <div class="kmf-review-consent">
+
+        <span>🛡️</span>
+
+        <div>
+          <strong>Customer Privacy & Permission</strong>
+
+          <p>
+            নাম, এলাকা বা ছবি প্রকাশের আগে অবশ্যই
+            ক্রেতার অনুমতি নেওয়া হবে।
+            অনুমতি না থাকলে পরিচয় প্রকাশ করা হবে না।
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- REVIEW SUBMIT -->
+      <div class="kmf-review-submit">
+
+        <h3>⭐ আপনার অভিজ্ঞতা জানাতে চান?</h3>
+
+        <p>
+          প্রকৃত ক্রেতারা তাদের অভিজ্ঞতা📱 WhatsApp-এ
+          পাঠাতে পারেন।
+        </p>
+
+        <a
+          href="https://wa.me/917047643951?text=আমি%20Kundu%20Mushroom%20Farm-এর%20Customer%20Review%20দিতে%20চাই।"
+          target="_blank">
+          📲 Review পাঠান
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- =========================================================
        3. 🎁 KUNDU CARE REWARD CHECK + 3 CARD SYSTEM
   ========================================================= -->
@@ -2056,8 +2118,7 @@
 
       </div>
     </div>
-  </section>
-  <!-- =========================================================
+  </section><!-- =========================================================
        4. 📍 CONTACT & PAYMENT
   ========================================================= -->
   <div class="contactPaymentBox" id="contactPayment">
@@ -2080,7 +2141,7 @@
       </div>
 
       <!-- Call -->
-      <a class="contactAction callBtn" href="tel:7047643951">
+      <a class="contactAction callBtn" href="tel:7047643951/8972802219">
         📞 সরাসরি কল করুন
       </a>
 
@@ -2092,9 +2153,7 @@
       <div class="contactInfo addressInfo">
         <strong>📍 ঠিকানা</strong>
         <span>Kundu Mushroom Farm</span>
-      </div>
-
-      <!-- Google Maps -->
+      </div><!-- Google Maps -->
       <a class="contactAction mapBtn" href="https://maps.app.goo.gl/jiGNFRwCgE1ADCLCL?g_st=awb" target="_blank" rel="noopener">
         📍 Google Maps-এ লোকেশন দেখুন
       </a>
@@ -2287,6 +2346,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- =========================================
        🎁 REWARD POPUP SYSTEM
   ========================================= -->
@@ -2350,6 +2411,13 @@
     --------------------------------------------------------- */
     function openRewardsDashboard() {
       const el = document.getElementById("kunduCareRewards");
+      if(el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function kmfOfferOrder() {
+      const el = document.getElementById("products");
       if(el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
@@ -2635,9 +2703,7 @@ Kundu Mushroom Farm`;
         clearInterval(rewardTimer);
         rewardTimer = null;
       }
-    }
-
-    function startRewardCountdown(){
+    }function startRewardCountdown(){
       if(rewardTimer) clearInterval(rewardTimer);
       rewardEndTime = Date.now() + (60 * 60 * 1000);
       updateRewardCountdown();
@@ -2671,7 +2737,9 @@ Kundu Mushroom Farm`;
         closeRewardOptions();
         closeRewardPopup();
       }
-    });document.getElementById("orderOverlay").addEventListener("click", function(event){
+    });
+
+    document.getElementById("orderOverlay").addEventListener("click", function(event){
       if(event.target === this){
         closeOrderPage();
       }
@@ -2683,227 +2751,259 @@ Kundu Mushroom Farm`;
       }
     });
 
-    /* =========================================
-       KUNDU MUSHROOM SUPER APP JS
-    ========================================= */
-    const KMF_SUPER_PRICE = {
-      oyster: 180,
-      button: 255,
-      grey: 190
-    };
-
-    function kmfSuperOpen(type){
-      const panel = document.getElementById("kmfSuperPanel");
-
-      if(type === "shop"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">🍄</div>
-            <div>
-              <h3>Fresh Mushroom Shop</h3>
-              <small>আপনার পছন্দের Product নির্বাচন করুন</small>
-            </div>
-          </div>
-          <div class="kmf-product-options">
-            ${kmfProductCard("🍄", "Oyster Mushroom", "₹180 / KG", "oyster")}
-            ${kmfProductCard("🍄", "Button Mushroom", "₹255 / KG", "button")}
-            ${kmfProductCard("🍄", "Grey Mushroom", "₹190 / KG", "grey")}
-          </div>
-        `;
+    /* =====================================================
+       KUNDU REAL CUSTOMER REVIEW ROTATOR
+    ===================================================== */
+    const KMF_REAL_REVIEWS = [
+      {
+        stars:5,
+        avatar:"👩‍🦱 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Fresh mushroom পেয়েছি এবং delivery সুবিধা ভালো ছিল।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"🤵 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"খুব ভালো mushroom পেয়েছি এবং খাবারটাও সুস্বাদু হয়েছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👨 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Packaging ভালো ছিল। Mushroom fresh অবস্থায় পেয়েছি।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩 ⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Order প্রবলেম ছিলো তবে WhatsApp-এ দ্রুত যোগাযোগ করতে পেরেছি।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👨‍🦱 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom-এর স্বাদ ভালো লেগেছে। আবার নেওয়ার ইচ্ছা আছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩‍🦰 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Fresh product পেয়েছি। Packing পরিষ্কার ও সুন্দর ছিল।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"🧔 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Order দেওয়ার process সহজ এবং পরিষ্কার মনে হয়েছে।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👩‍🦱 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom দিয়ে রান্না করে ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👨 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Delivery সুবিধা আমার জন্য বেশ উপকারী হয়েছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Product-এর দাম আগে থেকেই দেখতে পারা ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👨‍🦱 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom fresh ছিল এবং রান্নায় ভালো ফল পেয়েছি।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩‍🦰 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"ছোট quantity থেকেও order করার সুবিধা ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👨 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"WhatsApp-এর মাধ্যমে অর্ডার করা সুবিধাজনক হয়েছে।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👩 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom দিয়ে নতুন recipe চেষ্টা করেছি, ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"🧔 ⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Packing মোটামুটি ঠিক ছিলো এবং product ভালো অবস্থায় পেয়েছি।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩‍🦱 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"অর্ডার করার সময় information পরিষ্কারভাবে পাওয়া গেছে।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👨‍🦱 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Fresh mushroom-এর quality ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Family-এর জন্য mushroom নিয়েছিলাম, সবাই পছন্দ করেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👨 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Delivery option সম্পর্কে আগে জানতে পারা সুবিধাজনক।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👩‍🦰 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom রান্না করে ভালো স্বাদ পেয়েছি।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"🧔 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Order process সহজ এবং ব্যবহার করতে সুবিধা হয়েছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩‍🦱 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Fresh product এবং ভালো packaging পেয়েছি।",
+        permission:false
+      },
+      {
+        stars:4,
+        avatar:"👨 ⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Mushroom-এর taste ভালো লেগেছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👩 ⭐⭐⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"পছন্দের quantity নির্বাচন করে order করা সহজ হয়েছে।",
+        permission:false
+      },
+      {
+        stars:5,
+        avatar:"👨‍🦱 ⭐⭐⭐",
+        name:"Verified Customer",
+        area:"Area hidden",
+        text:"Product পাওয়ার পর ব্যবহার করে ভালো অভিজ্ঞতা হয়েছে।",
+        permission:false
       }
+    ];
 
-      if(type === "budget"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">🧮</div>
-            <div>
-              <h3>Mushroom Budget Planner</h3>
-              <small>আপনার বাজেট অনুযায়ী Combo দেখুন</small>
-            </div>
-          </div>
-          <div class="kmf-budget-input">
-            <label>আপনার বাজেট লিখুন</label>
-            <input id="kmfBudget" type="number" min="1" placeholder="যেমন ₹200">
-            <button class="kmf-budget-button" onclick="kmfMakeBudget()">🧮 Combo তৈরি করুন</button>
-          </div>
-          <div id="kmfBudgetResult" class="kmf-budget-result">
-            💰 বাজেট লিখে Combo তৈরি করুন।
-          </div>
-        `;
-      }
+    let kmfReviewIndex = 0;
 
-      if(type === "family"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">👨‍👩‍👧</div>
-            <div>
-              <h3>Family Quantity Guide</h3>
-              <small>কতজনের জন্য Mushroom?</small>
-            </div>
-          </div>
-          <div class="kmf-family-choice">
-            <button onclick="kmfFamily(1)">👤<br>1 জন</button>
-            <button onclick="kmfFamily(2)">👨‍👩‍👧<br>2–3 জন</button>
-            <button onclick="kmfFamily(4)">👨‍👩‍👧‍👦<br>4–5 জন</button>
-            <button onclick="kmfFamily(6)">👨‍👩‍👧‍👦<br>6+ জন</button>
-          </div>
-          <div id="kmfFamilyResult" class="kmf-family-result">
-            👨‍👩‍👧 আপনার Family Size নির্বাচন করুন।
-          </div>
-        `;
-      }
+    function kmfShowReview(){
+      const review = KMF_REAL_REVIEWS[kmfReviewIndex];
+      const stars = "⭐".repeat(review.stars);
 
-      if(type === "recipe"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">🍳</div>
-            <div>
-              <h3>Mushroom Recipe Ideas</h3>
-              <small>আজ কী রান্না করবেন?</small>
-            </div>
-          </div>
-          <div class="kmf-recipe-grid">
-            <div class="kmf-recipe-card">
-              <strong>🥗 নিরামিষ</strong>
-              <small>
-                🍄 Mushroom Curry<br>
-                🍄 Mushroom Fry<br>
-                🍄 Mushroom Pakora<br>
-                🍄 Mushroom Chilli
-              </small>
-            </div>
-            <div class="kmf-recipe-card">
-              <strong>🍗 আমিষ</strong>
-              <small>
-                🍄 Chicken Mushroom Curry<br>
-                🍄 Mushroom Chicken Fry<br>
-                🍄 Mushroom Egg Curry<br>
-                🍄 Mushroom Masala
-              </small>
-            </div>
-          </div>
-        `;
-      }
+      const starsEl = document.getElementById("kmfReviewStars");
+      const textEl = document.getElementById("kmfReviewText");
+      const nameEl = document.getElementById("kmfReviewName");
+      const areaEl = document.getElementById("kmfReviewArea");
+      const avatarEl = document.getElementById("kmfReviewAvatar");
+      const numberEl = document.getElementById("kmfReviewNumber");
 
-      if(type === "farm"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">👨‍🌾</div>
-            <div>
-              <h3>Kundu Farm Journey</h3>
-              <small>Farm থেকে Customer পর্যন্ত</small>
-            </div>
-          </div>
-          <div class="kmf-farm-timeline">
-            ${kmfFarmStep("🌱","Spawn","শুরু")}
-            ${kmfFarmStep("🌿","Growth","বৃদ্ধি")}
-            ${kmfFarmStep("🍄","Harvest","Fresh")}
-            ${kmfFarmStep("📦","Packing","প্রস্তুত")}
-            ${kmfFarmStep("🏍️","Delivery","আপনার কাছে")}
-          </div>
-        `;
-      }
+      if(starsEl) starsEl.textContent = stars;
+      if(textEl) textEl.textContent = "“" + review.text + "”";
 
-      if(type === "reorder"){
-        panel.innerHTML = `
-          <div class="kmf-panel-title">
-            <div class="kmf-panel-title-icon">🔄</div>
-            <div>
-              <h3>Quick Re-Order</h3>
-              <small>আগের পছন্দের মতো আবার Order করুন</small>
-            </div>
-          </div>
-          <div class="kmf-reorder-card">
-            <strong>🍄 Oyster Mushroom</strong>
-            <small>আপনার পছন্দের Quantity নির্বাচন করে WhatsApp-এ Order করুন।</small>
-            <button onclick="kmfQuickReorder()">📲 Quick Order</button>
-          </div>
-        `;
-      }
-    }
-
-    function kmfProductCard(icon, name, price, type){
-      return `
-        <div class="kmf-product-option">
-          <span>${icon}</span>
-          <strong>${name}</strong>
-          <small>${price}</small>
-          <button onclick="kmfProductOrder('${name}',${KMF_SUPER_PRICE[type]})">🛒 Order</button>
-        </div>
-      `;
-    }
-
-    function kmfProductOrder(name, price){
-      if(typeof addToCart === "function"){
-        addToCart(name, price);
+      if(review.permission === true){
+        if(nameEl) nameEl.textContent = review.name;
+        if(areaEl) areaEl.textContent = review.area;
       } else {
-        const message = `🍄 Kundu Mushroom Farm Order\n\n🍄 Product: ${name}\n💰 Rate: ₹${price}/KG\n\n📲 Quantity ও Order নিশ্চিত করতে WhatsApp-এ যোগাযোগ করুন।`;
-        window.open("https://wa.me/917047643951?text=" + encodeURIComponent(message), "_blank");
-      }
-    }
-
-    function kmfMakeBudget(){
-      const budget = Number(document.getElementById("kmfBudget").value);
-      const result = document.getElementById("kmfBudgetResult");
-
-      if(!budget || budget <= 0){
-        result.innerHTML = "⚠️ আগে আপনার Budget লিখুন।";
-        return;
+        if(nameEl) nameEl.textContent = "Verified Customer";
+        if(areaEl) areaEl.textContent = "পরিচয় প্রকাশ করা হয়নি";
       }
 
-      const oysterGram = Math.floor((budget / 180) * 1000 / 100) * 100;
-      const finalGram = Math.min(oysterGram, 1000);
-      const finalPrice = (finalGram * 180) / 1000;
+      if(avatarEl) avatarEl.textContent = review.avatar;
+      if(numberEl) numberEl.textContent = kmfReviewIndex + 1;
 
-      result.innerHTML = `
-        💰 আপনার Budget: <strong>₹${budget}</strong><br><br>
-        🍄 Recommended: <strong>Oyster Mushroom ${finalGram}g</strong><br>
-        💵 আনুমানিক দাম: <strong>₹${Math.round(finalPrice)}</strong><br><br>
-        <button class="kmf-budget-button" onclick="kmfProductOrder('Oyster Mushroom ${finalGram}g', 180)">
-          🛒 এই Combo Order করুন
-        </button>
-      `;
-    }
+      /* progress animation */
+      const progress = document.getElementById("kmfReviewProgress");
+      if(progress){
+        progress.style.transition = "none";
+        progress.style.width = "0%";
 
-    function kmfFamily(person){
-      let quantity = "";
-      let text = "";
-
-      if(person === 1){ quantity = "100–200g"; text = "একজনের জন্য ছোট Portion"; }
-      if(person === 2){ quantity = "200–300g"; text = "2–3 জনের জন্য"; }
-      if(person === 4){ quantity = "400–500g"; text = "4–5 জনের জন্য"; }
-      if(person === 6){ quantity = "600g–1kg"; text = "বেশি জনের Family Meal-এর জন্য"; }
-
-      document.getElementById("kmfFamilyResult").innerHTML = `
-        👨‍👩‍👧 <strong>${text}</strong><br><br>
-        🍄 Suggested Quantity: <strong>${quantity}</strong><br><br>
-        <small>এটি একটি আনুমানিক quantity guide; রান্নার ধরন ও ব্যক্তির প্রয়োজন অনুযায়ী পরিমাণ পরিবর্তন হতে পারে।</small>
-      `;
-    }
-
-    function kmfFarmStep(icon, title, subtitle){
-      return `
-        <div class="kmf-farm-step">
-          <div class="kmf-farm-step-icon">${icon}</div>
-          <strong>${title}</strong>
-          <small>${subtitle}</small>
-        </div>
-      `;
-    }
-
-    function kmfQuickReorder(){
-      const message = `🍄 Kundu Mushroom Farm - Quick Re-Order\n\nআমি আবার Mushroom Order করতে চাই।\n\n📲 অনুগ্রহ করে Available Mushroom, Quantity এবং বর্তমান দাম জানাবেন।\n\nধন্যবাদ।`;
-      window.open("https://wa.me/917047643951?text=" + encodeURIComponent(message), "_blank");
-    }
-
-    function kmfSuperGoProducts(){
-      const products = document.getElementById("products");
-      if(products){
-        products.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        setTimeout(function(){
+          progress.style.transition = "width 10s linear";
+          progress.style.width = "100%";
+        }, 50);
       }
+
+      kmfReviewIndex = (kmfReviewIndex + 1) % KMF_REAL_REVIEWS.length;
     }
+
+    // Initialize Review Rotator
+    document.addEventListener("DOMContentLoaded", function(){
+      kmfShowReview();
+      setInterval(kmfShowReview, 10000);
+    });
   </script>
 </body>
 </html>
